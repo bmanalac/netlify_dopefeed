@@ -1,0 +1,72 @@
+<template>
+  <nav id="nav">
+    <div class="nav-container grid grid-nav">
+      <nuxt-link class="logo" to="/">LOGO</nuxt-link>
+      <div class="nav-links-container">
+        <ul class="nav-links grid grid-links">
+          <nuxt-link class="nav-link" to="/">Home</nuxt-link>
+          <nuxt-link class="nav-link" to="/about">About</nuxt-link>
+          <nuxt-link class="nav-link" to="/gallery">Gallery</nuxt-link>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</template>
+
+<script>
+
+
+export default {
+  data() {
+    return {
+      navData: 'This is Nav data'
+    }
+  }
+}
+</script>
+
+<style>
+  nav {
+    max-width: 100%;
+    -webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+    max-width: 1200px;
+    width: 100%;
+    overflow: hidden;
+    background: var(--dark-bg);
+  }
+
+  .nav-container {
+    width: 100%;
+  }
+
+  .logo {
+    margin: auto 0;
+    padding-left: 10px;
+  }
+
+  .grid-nav {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+  }
+
+  .nav-links-container {
+    float: left;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .grid-links {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+  }
+
+  .nav-links a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+</style>
