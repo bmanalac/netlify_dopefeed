@@ -26,6 +26,7 @@ export default {
   --button-bg: #58BC82;
   --button-light: #8befb2;
   --button-dark: #208b55;
+  --max-width: 1600px;
 }
 
 html {
@@ -37,7 +38,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  max-width: 1200px;
+  max-width: var(--max-width);
   width: 100%;
 }
 

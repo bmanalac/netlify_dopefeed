@@ -27,11 +27,8 @@ export default {
 
 <style>
   nav {
-    max-width: 100%;
-    -webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
-    max-width: 1200px;
+    max-width: var(--max-width);
     width: 100%;
     overflow: hidden;
     background: var(--dark-bg);
