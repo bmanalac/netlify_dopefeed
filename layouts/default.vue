@@ -49,6 +49,7 @@ html {
 
 a {
   text-decoration: none;
+  padding: 14px 16px;
 }
 
 .grid {

@@ -1,12 +1,17 @@
 <template>
   <section id="home">
+    <FeaturedPost/>
     <h1>this is the home page</h1>
   </section>
 </template>
 
 <script>
-export default {
+import FeaturedPost from '../components/FeaturedPost.vue'
 
+export default {
+  components: {
+    FeaturedPost,
+  }
 }
 </script>
 

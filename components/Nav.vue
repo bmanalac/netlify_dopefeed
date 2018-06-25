@@ -1,8 +1,8 @@
 <template>
   <nav id="nav">
-    <div class="nav-container grid grid-nav">
+    <div class="nav__container nav__grid grid">
       <nuxt-link class="logo" to="/">LOGO</nuxt-link>
-      <div class="nav-links-container">
+      <div class="nav-links__container">
         <ul class="nav-links grid grid-links">
           <nuxt-link class="nav-link" to="/">Home</nuxt-link>
           <nuxt-link class="nav-link" to="/about">About</nuxt-link>
@@ -32,9 +32,10 @@ export default {
     width: 100%;
     overflow: hidden;
     background: var(--dark-bg);
+    z-index: 999;
   }
 
-  .nav-container {
+  .nav__container {
     width: 100%;
   }
 
@@ -43,16 +44,15 @@ export default {
     padding-left: 10px;
   }
 
-  .grid-nav {
+  .nav__grid {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5px;
   }
 
-  .nav-links-container {
+  .nav-links__container {
     float: left;
     color: #000;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
   }
