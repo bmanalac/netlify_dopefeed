@@ -55,7 +55,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .featured-2-cards-list__container {
   border: 1px solid black;
   list-style-type: none;

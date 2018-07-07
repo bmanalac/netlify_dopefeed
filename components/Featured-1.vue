@@ -20,7 +20,7 @@ export default {
         category: "My Pick",
         title: "featured title that doesn't make any sense",
         summary: "Lorem ipsum dolor amet tote bag tilde butcher hammock.",
-        img: "http://via.placeholder.com/600x300",
+        img: "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4fa061122a5ce899fcb5454dae8dbe99&auto=format&fit=crop&w=1950&q=80",
         alt: "alt-text"
       }
     };
@@ -30,7 +30,7 @@ export default {
 
 <style lang="scss">
 .featured1 {
-  border-bottom: 1px solid black;
+  // border-bottom: 1px solid black;
   position: relative;
   width: 100%;
 }
