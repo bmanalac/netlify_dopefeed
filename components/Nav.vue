@@ -27,7 +27,7 @@ export default {
 
 <style>
   nav {
-    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
     max-width: var(--max-width);
     width: 100%;
     overflow: hidden;
