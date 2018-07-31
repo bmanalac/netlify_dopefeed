@@ -48,18 +48,24 @@ export default {
           summary: "lorem ipsum text that matters",
           timestamp: "1 hour ago"
         },
-        // {
-        //   image: "https://images.unsplash.com/photo-1523567940912-9a9b9788f863?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a80753a0b7c2711ff6ccfef562a77021&auto=format&fit=crop&w=1050&q=80",
-        //   title: "gentleman's Pubs To Scout",
-        //   summary: "lorem ipsum text that matters",
-        //   timestamp: "1 hour ago"
-        // },
-        // {
-        //   image: "https://images.unsplash.com/photo-1506833345857-935a8275b07a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0d87985046dd0bc1e9b738ecc4cc4985&auto=format&fit=crop&w=1950&q=80",
-        //   title: "Your First Date Dinner Here",
-        //   summary: "lorem ipsum text that matters",
-        //   timestamp: "1 hour ago"
-        // }
+        {
+          image: "https://images.unsplash.com/photo-1523567940912-9a9b9788f863?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a80753a0b7c2711ff6ccfef562a77021&auto=format&fit=crop&w=1050&q=80",
+          title: "gentleman's Pubs To Scout",
+          summary: "lorem ipsum text that matters",
+          timestamp: "1 hour ago"
+        },
+        {
+          image: "https://images.unsplash.com/photo-1506833345857-935a8275b07a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0d87985046dd0bc1e9b738ecc4cc4985&auto=format&fit=crop&w=1950&q=80",
+          title: "Your First Date Dinner Here",
+          summary: "lorem ipsum text that matters",
+          timestamp: "1 hour ago"
+        },
+        {
+          image: "https://images.unsplash.com/photo-1500217052183-bc01eee1a74e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=83e5d3e676230de77a2c78f9563d1933&auto=format&fit=crop&w=1868&q=80",
+          title: "Summer Cocktails",
+          summary: "lorem ipsum text that matters",
+          timestamp: "1 hour ago"
+        },
       ]
     };
   }
@@ -69,6 +75,7 @@ export default {
 <style lang="scss">
 .feature-2__container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
     position: relative;
@@ -77,7 +84,6 @@ export default {
 .feature-card-item__container {
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
 // styles post-card-content
@@ -91,9 +97,6 @@ export default {
     .feature-card-image {
 
         img {
-            // position: absolute;
-            // top: 0;
-            // left: 0;
             height: 200px;
             width: 100%;
             object-fit: cover;
@@ -120,7 +123,25 @@ export default {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 1024px) {
+    .feature-card-item__container {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .feature-card-item__container {
+        width: 33%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .feature-card__details {
+        border-right: 1px solid #e5e5e5;
+    }
+}
+
+@media only screen and (max-width: 767px) {
     .feature-2__container {
         flex-direction: column;
     }
@@ -130,8 +151,7 @@ export default {
     }
 
     .feature-card__image-link {
-        width: 120px;
-        max-width: 160px;
+        width: 38%;
         min-width: 120px;
         height: 160px;  
         max-height: 220px;
@@ -148,10 +168,5 @@ export default {
     }
 }
 
-@media only screen and (min-width: 768px) {
-    .feature-card__details {
-        border-right: 1px solid #e5e5e5;
-    }
-}
 </style>
 
