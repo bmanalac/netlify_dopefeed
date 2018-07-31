@@ -1,5 +1,5 @@
 <template>
-    <div class="featured1">
+    <div class="featured1__container">
         <nuxt-link 
             class="title-card__image-link grid" 
             v-bind:style="{ 'background-image': `url(${featured.img})` }" 
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss">
-.featured1 {
+.featured1__container {
   // border-bottom: 1px solid black;
   position: relative;
   width: 100%;
