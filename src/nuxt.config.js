@@ -25,13 +25,6 @@ module.exports = {
   buildDir: '../functions/nuxt',
   build: {
     publicPath: '/public/',
-    extractCSS: {
-      allChunks: true
-    },
-    postcss: [
-      require('tailwindcss')('./tailwind.js'),
-      require('autoprefixer'),
-    ],
     /*
     ** Run ESLint on save
     */
