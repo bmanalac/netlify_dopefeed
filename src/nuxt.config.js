@@ -22,9 +22,7 @@ module.exports = {
   /*
   ** Build configuration
   */
-  // buildDir: '../functions/nuxt',
   build: {
-    publicPath: '/public/',
     /*
     ** Run ESLint on save
     */
