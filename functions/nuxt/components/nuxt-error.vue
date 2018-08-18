@@ -8,8 +8,11 @@
     <nuxt-link class="error-link" to="/">Back to the home page</nuxt-link>
   </p>
   
+<<<<<<< HEAD
   <p class="description" v-else>An error occurred while rendering the page. Check developer tools console for details.</p>
   
+=======
+>>>>>>> origin/feature2_component
 
   <div class="logo">
     <a href="https://nuxtjs.org" target="_blank" rel="noopener">Nuxt.js</a>
@@ -34,6 +37,7 @@ export default {
     }
   },
   
+<<<<<<< HEAD
   // Only on debug mode
   data () {
     return {
@@ -54,6 +58,8 @@ export default {
     }
   },
   
+=======
+>>>>>>> origin/feature2_component
   computed: {
     statusCode () {
       return (this.error && this.error.statusCode) || 500
