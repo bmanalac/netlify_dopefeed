@@ -3,12 +3,9 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-<<<<<<< HEAD
-=======
-const _65838c3d = () => import('..\\..\\src\\pages\\about.vue' /* webpackChunkName: "pages_about" */).then(m => m.default || m)
-const _da7aa0fc = () => import('..\\..\\src\\pages\\gallery.vue' /* webpackChunkName: "pages_gallery" */).then(m => m.default || m)
-const _f58931fc = () => import('..\\..\\src\\pages\\index.vue' /* webpackChunkName: "pages_index" */).then(m => m.default || m)
->>>>>>> origin/feature2_component
+const _b3c6cfaa = () => import('..\\..\\src\\pages\\about.vue' /* webpackChunkName: "pages_about" */).then(m => m.default || m)
+const _114877f0 = () => import('..\\..\\src\\pages\\gallery.vue' /* webpackChunkName: "pages_gallery" */).then(m => m.default || m)
+const _74571a20 = () => import('..\\..\\src\\pages\\index.vue' /* webpackChunkName: "pages_index" */).then(m => m.default || m)
 
 
 
@@ -68,25 +65,21 @@ export function createRouter () {
     linkExactActiveClass: 'nuxt-link-exact-active',
     scrollBehavior,
     routes: [
-<<<<<<< HEAD
-
-=======
 		{
 			path: "/about",
-			component: _65838c3d,
+			component: _b3c6cfaa,
 			name: "about"
 		},
 		{
 			path: "/gallery",
-			component: _da7aa0fc,
+			component: _114877f0,
 			name: "gallery"
 		},
 		{
 			path: "/",
-			component: _f58931fc,
+			component: _74571a20,
 			name: "index"
 		}
->>>>>>> origin/feature2_component
     ],
     
     

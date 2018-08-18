@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default {}
-=======
 
 let files = require.context('@/middleware', false, /^\.\/(?!-)[^.]+\.(js)$/)
 let filenames = files.keys()
@@ -21,4 +18,3 @@ for (let filename of filenames) {
 
 export default middleware
 
->>>>>>> origin/feature2_component

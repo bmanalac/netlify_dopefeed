@@ -28,18 +28,16 @@
     export default {};
 </script>
 
-<style lang="scss">
-    footer {
-      .footer__container {
-        display: grid;
-        grid-template: auto / 1fr 1fr;
-        height: 70vh;
-      }
+<style>
+    .footer__container {
+      display: grid;
+      grid-template: auto / 1fr 1fr;
+      height: 70vh;
+    }
 
-      .resources-menu {
-        display: grid;
-        grid-template: auto / minmax(100px, 1fr);
-        grid-gap: 10px;
-      }
+    .resources-menu {
+      display: grid;
+      grid-template: auto / minmax(100px, 1fr);
+      grid-gap: 10px;
     }
 </style>

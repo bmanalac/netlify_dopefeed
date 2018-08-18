@@ -46,7 +46,7 @@
 	};
 </script>
 
-<style lang="scss">
+<style>
 	.pin-r-custom {
 	  right: 12%;
 	}
@@ -57,7 +57,7 @@
 	  box-decoration-break: clone;
 	}
 
-	//ContentTypeBtn Component Styles
+	/* ContentTypeBtn Component Styles */
 	.title-card__content-type-btn {
 	  background-color: rgba(0, 0, 0, 0.8);
 	  box-shadow: 1rem 0 0 rgba(0, 0, 0, 0.8), -1rem 0 0 rgba(0, 0, 0, 0.8);

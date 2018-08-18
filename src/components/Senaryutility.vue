@@ -83,7 +83,7 @@
 	};
 </script>
 
-<style lang="scss">
+<style>
 	.senary-utility__container {
 	  display: grid;
 	}
@@ -93,10 +93,8 @@
 	}
 
 	@media (max-width: 358px) {
-	  .senary-utility__container {
-	    .styled-responsive-image {
-	      padding-top: 120px;
-	    }
+	  .styled-responsive-image {
+	    padding-top: 120px;
 	  }
 	}
 

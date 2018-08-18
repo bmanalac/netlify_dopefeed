@@ -113,11 +113,7 @@ export async function setContext(app, context) {
         return process.client
       },
       isStatic: process.static,
-<<<<<<< HEAD
       isDev: true,
-=======
-      isDev: false,
->>>>>>> origin/feature2_component
       isHMR: false,
       app,
       

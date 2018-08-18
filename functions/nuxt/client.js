@@ -29,7 +29,6 @@ let router
 const NUXT = window.__NUXT__ || {}
 
 
-<<<<<<< HEAD
 // Setup global Vue error handler
 const defaultErrorHandler = Vue.config.errorHandler
 Vue.config.errorHandler = function (err, vm, info) {
@@ -56,8 +55,6 @@ Vue.config.errorHandler = function (err, vm, info) {
   }
 }
 
-=======
->>>>>>> origin/feature2_component
 
 // Create and mount App
 createApp()
@@ -391,12 +388,9 @@ function fixPrepatch(to, ___) {
     })
     showNextPage.call(this, to)
     
-<<<<<<< HEAD
     // Hot reloading
     setTimeout(() => hotReloadAPI(this), 100)
     
-=======
->>>>>>> origin/feature2_component
   })
 }
 
@@ -418,7 +412,6 @@ function nuxtReady (_app) {
 }
 
 
-<<<<<<< HEAD
 // Special hot reload with asyncData(context)
 function getNuxtChildComponents($parent, $components = []) {
   $parent.$children.forEach(($child) => {
@@ -512,8 +505,6 @@ function addHotReload ($component, depth) {
   }
 }
 
-=======
->>>>>>> origin/feature2_component
 
 async function mountApp(__app) {
   // Set global variables
@@ -543,12 +534,9 @@ async function mountApp(__app) {
       // Call window.onNuxtReady callbacks
       nuxtReady(_app)
       
-<<<<<<< HEAD
       // Enable hot reloading
       hotReloadAPI(_app)
       
-=======
->>>>>>> origin/feature2_component
     })
   }
 

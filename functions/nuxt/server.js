@@ -9,11 +9,7 @@ import { applyAsyncData, sanitizeComponent, getMatchedComponents, getContext, mi
 const debug = require('debug')('nuxt:render')
 debug.color = 4 // force blue color
 
-<<<<<<< HEAD
 const isDev = true
-=======
-const isDev = false
->>>>>>> origin/feature2_component
 
 const noopApp = () => new Vue({ render: (h) => h('div') })
 
@@ -81,11 +77,7 @@ export default async ssrContext => {
     return renderErrorPage()
   }
 
-<<<<<<< HEAD
   const s = isDev && Date.now()
-=======
-  
->>>>>>> origin/feature2_component
 
   // Components are already resolved by setContext -> getRouteData (app/utils.js)
   const Components = getMatchedComponents(router.match(ssrContext.url))
@@ -192,11 +184,7 @@ export default async ssrContext => {
     return Promise.all(promises)
   }))
 
-<<<<<<< HEAD
   if (asyncDatas.length) debug('Data fetching ' + ssrContext.url + ': ' + (Date.now() - s) + 'ms')
-=======
-  
->>>>>>> origin/feature2_component
 
   // datas are the first row of each
   ssrContext.nuxt.data = asyncDatas.map(r => r[0] || {})
