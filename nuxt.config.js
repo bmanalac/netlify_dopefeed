@@ -22,7 +22,6 @@ module.exports = {
   /*
   ** Build configuration
   */
-  buildDir: 'nuxt-dist',
   build: {
     /*
     ** Run ESLint on save
