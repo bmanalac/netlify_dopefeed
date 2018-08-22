@@ -26,7 +26,6 @@
 	      alt: "prepped food on yellow table"
 	    };
 	  },
-	  layout: "default"
 	};
 </script>
 

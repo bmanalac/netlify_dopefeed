@@ -28,7 +28,6 @@
 	import ContentTypeBtn from "../components/common/ContentTypeBtn.vue";
 
 	export default {
-		layout: 'default',
 	  components: {
 	    ContentTypeBtn
 	  },
