@@ -1,15 +1,15 @@
 <template>
   <div>
     
-    <Landing />
+    <Landing v-if="devMode === true" />
     
-    <!-- <div>
+    <div v-else>
     
       <Nav/>
     
       <nuxt/>
     
-    </div> -->
+    </div>
   
   </div>
 </template>
