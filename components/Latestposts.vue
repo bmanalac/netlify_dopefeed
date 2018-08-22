@@ -1,26 +1,26 @@
 <template>
     <div class="siderail-posts__container relative">
 
-        <div class="siderail__header w-full p-10 text-center border-b">
-            Something goes here
-        </div>
+        <div class="siderail__header w-full p-10 text-center border-b">Something goes here</div>
 
         <div class="siderail__hero p-4 border-b">
-            
+
             <h1>{{ latestposthero.title }}</h1>
-            
+
             <span>{{ latestposthero.summary }}</span>
-            
+
             <span>{{ latestposthero.timestamp }}</span>
+
         </div>
 
-        <div class="sidreail-posts__list p-4 border-b" v-for="post in latestpostlist" :key="post.index">
-            
+        <div class="sidreail-posts__list p-4 border-b" v-for="(post, index) in latestpostlist" :key="index">
+
             <h1>{{ post.title }}</h1>
-            
+
             <span>{{ post.summary }}</span>
-            
+
             <span>{{ post.timestamp }}</span>
+
         </div>
 
     </div>

@@ -28,7 +28,7 @@
 	import Hero from "../components/Hero.vue";
 	import HeroRelated from "../components/HeroRelated.vue"
 	import Utility from "../components/Utility.vue";
-	// import Latestposts from "../components/LatestPosts.vue";
+	import Latestposts from "../components/LatestPosts.vue";
 	import Footer from "../components/Footer.vue";
 
 	export default {
@@ -36,7 +36,7 @@
 			Hero,
 			HeroRelated,
 	    Utility,
-	    // Latestposts,
+	    Latestposts,
 	    Footer
 	  }
 	};
