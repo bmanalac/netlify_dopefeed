@@ -1,13 +1,13 @@
 <template>
 	<div class="landing__container relative overflow-hidden h-screen">
 
-		<div class="landing-shadow border-4 border-black p-4 md:mr-1 z-10">
+		<div class="landing-shadow border-4 border-black p-4 mx-1 z-10">
 
 			<div class="landing-details text-center p-4 border-4 border-black">
 
 				<h1 class="font-cookie text-5xl text-brown-darkest border-grey-lightest">We're cooking something worth your salt</h1>
 
-				<span class="font-cookie text-4xl text-brown-darkest border-grey-lightest">Good things come to thoughs who wait.</span>
+				<span class="font-cookie text-4xl text-brown-darkest border-grey-lightest">Good things come to those who wait.</span>
 			</div>
 
 		</div>
@@ -44,7 +44,7 @@
 	}
 
 	.landing-details {
-	  text-shadow: 0 0 1rem white;
+	  text-shadow: 1px 1px 2px white;
 	}
 
 	img {
