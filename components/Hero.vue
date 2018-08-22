@@ -11,11 +11,11 @@
 
 			<div class="block absolute pin-b pin-l pin-r-custom text-white pt-0 px-8 pb-8 overflow-hidden">
 
-				<span class="title-card__details-group table bg-red-light font-Noto text-base mb-px -ml-4 p-2">{{ featured.category }}</span>
+				<span class="title-card__details-group table bg-red-light font-noto text-base mb-px -ml-4 p-2">{{ featured.category }}</span>
 
-				<h1 class="title-card__head-link inline font-Oswald text-3xl md:text-4xl leading-normal">{{ featured.title }}</h1>
+				<h1 class="title-card__head-link inline font-oswald text-2xl sm:text-3xl md:text-4xl leading-normal">{{ featured.title }}</h1>
 
-				<ContentTypeBtn class="title-card__content-type-btn table mb-px py-2" />
+				<ContentTypeBtn class="title-card__content-type-btn table mt-px py-2" />
 
 			</div>
 
@@ -28,10 +28,11 @@
 	import ContentTypeBtn from "../components/common/ContentTypeBtn.vue";
 
 	export default {
+		layout: 'default',
 	  components: {
 	    ContentTypeBtn
 	  },
-	  data() {
+	  data: () => {
 	    return {
 	      featured: {
 	        category: "New Arrivals",
@@ -42,11 +43,11 @@
 	        alt: "alt-text"
 	      }
 	    };
-	  }
+		}
 	};
 </script>
 
-<style>
+<style scoped>
 	.pin-r-custom {
 	  right: 12%;
 	}

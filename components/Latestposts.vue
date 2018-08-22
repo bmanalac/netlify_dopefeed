@@ -1,11 +1,11 @@
 <template>
     <div class="siderail-posts__container relative">
 
-        <div class="siderail__header w-full p-10 text-center border-b bg-grey-lighter">
+        <div class="siderail__header w-full p-10 text-center border-b">
             Something goes here
         </div>
 
-        <div class="siderail__hero p-4 border-b bg-grey-lighter">
+        <div class="siderail__hero p-4 border-b">
             
             <h1>{{ latestposthero.title }}</h1>
             
@@ -14,7 +14,7 @@
             <span>{{ latestposthero.timestamp }}</span>
         </div>
 
-        <div class="sidreail-posts__list p-4 border-b bg-grey-lighter" v-for="post in latestpostlist" :key="post.index">
+        <div class="sidreail-posts__list p-4 border-b" v-for="post in latestpostlist" :key="post.index">
             
             <h1>{{ post.title }}</h1>
             
@@ -58,5 +58,5 @@
     };
 </script>
 
-<style>
+<style scoped>
 </style>

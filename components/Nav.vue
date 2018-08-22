@@ -26,7 +26,7 @@
 
 <script>
 	export default {
-	  data() {
+	  data: () => {
 	    return {
 	      navData: "This is Nav data"
 	    };
@@ -34,7 +34,7 @@
 	};
 </script>
 
-<style>
+<style scoped>
 	nav {
 	  /* position: fixed; */
 	  /* top: 0;

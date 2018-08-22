@@ -1,7 +1,7 @@
 <template>
 	<div class="senary-utility__container relative w-full">
 
-		<div class="flex flex-row w-full md:flex-col" v-for="post in utilitypost" :key="post.index">
+		<div class="flex flex-row w-full md:flex-col" v-for="(post, index) in utilitypost" :key="index">
 
 			<nuxt-link class="block overflow-hidden w-1/2 h-full md:w-full" to="/gallery">
 
@@ -13,7 +13,8 @@
 
 			</nuxt-link>
 
-			<div class="utility-card__details w-full px-6 py-8 sm:border-b md:border-b-0 md:border-r border-solid border-white-dark md:h-48">
+			<div class="utility-card__details w-full px-6 py-8 border-b md:border-t-0 md:border-r md:border-b-0 border-solid border-white-dark md:h-48" 
+				v-bind:class="(index === 0) ? 'border-t' : null">
 
 				<nuxt-link class="flex-row justify-between text-black p-0" to="/gallery">
 
@@ -83,7 +84,7 @@
 	};
 </script>
 
-<style>
+<style scoped>
 	.senary-utility__container {
 	  display: grid;
 	}

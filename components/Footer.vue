@@ -28,7 +28,7 @@
     export default {};
 </script>
 
-<style>
+<style scoped>
     .footer__container {
       display: grid;
       grid-template: auto / 1fr 1fr;

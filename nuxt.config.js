@@ -11,10 +11,13 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Caveat|Noto+Sans|Oswald|Quattrocento+Sans|Questrial' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Caveat|Cookie|Great+Vibes|Noto+Sans|Oswald|Quattrocento+Sans|Questrial' }
     ]
   },
-  css: ['~/assets/css/tailwind.css'],
+  css: [
+    'assets/css/main.css',
+    '~/assets/css/tailwind.css'
+  ],
   /*
   ** Customize the progress bar color
   */
