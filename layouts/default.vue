@@ -1,7 +1,7 @@
 <template>
   <div>
     
-    <Landing v-if="devMode === true" />
+    <Landing v-if="devMode === false" />
     
     <div v-else>
     
