@@ -11,7 +11,7 @@
 
             <h1 class="text-center text-xs md:text-sm leading-loose px-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit corporis repellendus, temporibus necessitatibus placeat hic in reiciendis soluta deleniti et voluptatum quaerat at eum aut corrupti, consequuntur commodi? Neque, cumque!</h1>
             <br>
-            <h1 class="text-right text-xs md:text-sm pr-6">- Remeber This</h1>
+            <h1 class="text-right text-xs md:text-sm pr-6">- Remember This</h1>
 
             <span class="block quote-icon quote-icon__right relative">
 
