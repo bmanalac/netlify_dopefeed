@@ -1,26 +1,21 @@
 <template>
 	<section class="section">
 
+		<Hero class="bundle-feature-1" />
+
 		<div class="bundle__container md:border-b border-solid border-white-dark">
 
-			<div class="left-utility">
+			<!-- <HeroRelated class="bundle-sub-feature my-4" /> -->
 
-				<Hero class="bundle-feature-1" />
+			<Utility class="bundle-feature-2" />
 
-				<HeroRelated class="bundle-sub-feature my-4" />
-
-				<Utility class="bundle-feature-2" />
-
-			</div>
-
-			<LatestPosts class="right-utility bundle-feature-3 bg-grey-lighter" />
+			<LatestPosts class="bundle-feature-3 bg-grey-lighter" />
 
 		</div>
 
 		<Footer />
 
 	</section>
-
 
 </template>
 
@@ -33,11 +28,11 @@
 
 	export default {
 	  components: {
-			Hero,
-			HeroRelated,
+	    Hero,
+	    HeroRelated,
 	    Utility,
 	    LatestPosts,
-	    Footer,
+	    Footer
 	  }
 	};
 </script>
@@ -49,11 +44,11 @@
 	    grid-template: auto / 2fr minmax(200px, 1fr);
 	    grid-template-areas: "left-util right-util";
 	  }
-	  .left-utility {
+	  .bundle-feature-2 {
 	    grid-area: left-util;
 	  }
 
-	  .right-utility {
+	  .bundle-feature-3 {
 	    grid-area: right-util;
 	  }
 	}

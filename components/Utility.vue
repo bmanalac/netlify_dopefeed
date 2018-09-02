@@ -13,8 +13,7 @@
 
 			</nuxt-link>
 
-			<div class="utility-card__details w-full px-6 py-8 border-b md:border-t-0 md:border-r md:border-b-0 border-solid border-white-dark md:h-48" 
-				v-bind:class="(index === 0) ? 'border-t' : null">
+			<div class="utility-card__details w-full px-6 py-8 border-b md:border-t-0 md:border-r md:border-b-0 border-solid border-white-dark md:h-48" v-bind:class="(index === 0) ? 'border-t' : null">
 
 				<nuxt-link class="flex-row justify-between text-black p-0" to="/gallery">
 

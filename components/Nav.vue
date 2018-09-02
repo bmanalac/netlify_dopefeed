@@ -1,23 +1,29 @@
 <template>
-	<nav class="nav">
+	<nav id="nav">
 
-		<div class="nav__container">
+		<div class="hamburger-icon__container fixed pt-0 pl-0 w-16 h-16 z-50 cursor-pointer" v-on:click="isActive = !isActive">
 
-			<nuxt-link class="logo" to="/">LOGO</nuxt-link>
+			<div class="hamburger-icon">
 
-			<div class="nav-links__container">
+				<div class="text-red-light mx-0 my-1" v-bind:class="{ 'opacity-0': isActive }">Menu</div>
 
-				<ul class="nav-links__list">
+				<div class="bar1 h-1 bg-red-light mx-0 my-1" v-bind:class="{ active: isActive }"></div>
 
-					<nuxt-link class="nav-link" to="/">Home</nuxt-link>
+				<div class="bar2 h-1 bg-red-light mx-0 my-1" v-bind:class="{ active: isActive, 'opacity-0': isActive }"></div>
 
-					<nuxt-link class="nav-link" to="/about">About</nuxt-link>
-
-					<nuxt-link class="nav-link" to="/gallery">Gallery</nuxt-link>
-
-				</ul>
+				<div class="bar3 h-1 bg-red-light mx-0 my-1" v-bind:class="{ active: isActive }"></div>
 
 			</div>
+
+		</div>
+
+		<div class="side-menu__links fixed flex flex-col justify-center pt-0 w-4/5 md:w-1/2 h-screen z-40" v-bind:class="{ 'not-active': !isActive, 'active': isActive }" v-on:click="isActive = !isActive">
+
+			<nuxt-link class="text-black pl-4 py-4 hover:bg-grey-lightest hover:shadow" to="/">Home</nuxt-link>
+
+			<nuxt-link class="text-black pl-4 py-4 hover:bg-grey-lightest hover:shadow" to="/about">About</nuxt-link>
+
+			<nuxt-link class="text-black pl-4 py-4 hover:bg-grey-lightest hover:shadow" to="/gallery">Gallery</nuxt-link>
 
 		</div>
 
@@ -26,64 +32,48 @@
 
 <script>
 	export default {
-	  data: () => {
+	  data: function() {
 	    return {
-	      navData: "This is Nav data"
+	      isActive: false
 	    };
 	  }
 	};
 </script>
 
 <style scoped>
-	nav {
-	  /* position: fixed; */
-	  /* top: 0;
-	  left: 0; */
-	  background: white;
-	  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
-	  width: 100%;
-	  overflow: hidden;
-	  z-index: 999;
-	}
-
-	.logo {
-	  margin: auto 0;
-	  padding-left: 10px;
-	  font-size: 1.5rem;
-	}
-
-	.nav__container {
+	.hamburger-icon__container {
 	  display: grid;
-	  grid-template: 50px / 1fr 3fr 1fr;
-	  grid-gap: 5px;
-	  width: 100%;
 	}
 
-	.nav-links__container {
-	  float: left;
-	  color: #000;
-	  text-align: center;
-	  text-decoration: none;
-	  font-size: 1.25rem;
-	  margin: auto 0;
+	.hamburger-icon {
+	  place-self: center;
 	}
 
-	.nav-links__list {
-	  display: grid;
-	  grid-template-columns: repeat(3, 1fr);
+	.side-menu__links {
+	  background-color: rgba(224, 224, 224, 0.95);
 	}
 
-	a.nav-link {
-	  padding: 5px 10px;
+	.not-active.side-menu__links {
+	  left: -80%;
 	}
 
-	a:hover {
-	  color: red;
+	.active.side-menu__links {
+	  left: 0;
 	}
 
-	@media (min-width: 768px) {
-	  .nav__container {
-	    grid-template-rows: 70px;
-	  }
+	a,
+	.side-menu__links,
+	.bar1,
+	.bar2,
+	.bar3 {
+	  transition: 0.3s;
+	}
+
+	.active.bar1 {
+	  transform: rotate(-45deg) translate(-7px, 5px);
+	}
+
+	.active.bar3 {
+	  transform: rotate(45deg) translate(-6px, -5px);
 	}
 </style>
