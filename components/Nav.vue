@@ -1,10 +1,10 @@
 <template>
 	<nav id="nav">
 
-		<div class="hamburger-icon__container fixed pt-0 pl-0 w-16 h-16 z-50 cursor-pointer" v-on:click="isActive = !isActive">
+		<div class="flex fixed pt-0 pl-0 w-16 h-16 z-50 cursor-pointer" v-on:click="isActive = !isActive">
 
-			<div class="hamburger-icon">
-
+			<div class="m-auto">
+				
 				<div class="text-red-light mx-0 my-1" v-bind:class="{ 'opacity-0': isActive }">Menu</div>
 
 				<div class="bar1 h-1 bg-red-light mx-0 my-1" v-bind:class="{ active: isActive }"></div>
@@ -43,14 +43,6 @@
 </script>
 
 <style scoped>
-	.hamburger-icon__container {
-	  display: grid;
-	}
-
-	.hamburger-icon {
-	  place-self: center;
-	}
-
 	.side-menu__links {
 	  background-color: rgba(224, 224, 224, 0.95);
 	}
