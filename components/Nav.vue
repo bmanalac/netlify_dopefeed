@@ -17,7 +17,9 @@
 
 		</div>
 
-		<div class="side-menu__links fixed flex flex-col justify-center pt-0 w-4/5 md:w-1/2 h-screen z-40" v-bind:class="{ 'not-active': !isActive, 'active': isActive }" v-on:click="isActive = !isActive">
+		<div class="side-menu__links fixed flex flex-col justify-center pt-0 w-4/5 md:w-1/2 h-screen z-40" 
+			v-bind:class="{ 'not-active': !isActive, 'active': isActive }" 
+			v-on:click="isActive = !isActive">
 
 			<nuxt-link class="text-black pl-4 py-4 hover:bg-grey-lightest hover:shadow" to="/">Home</nuxt-link>
 
@@ -36,7 +38,7 @@
 	    return {
 	      isActive: false
 	    };
-	  }
+		}
 	};
 </script>
 

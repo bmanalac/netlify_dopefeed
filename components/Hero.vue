@@ -50,7 +50,14 @@
 
 <style scoped>
 	.filter {
-		background-color: rgba(0,0,0,0.6);
+	  /* background-color: rgba(0,0,0,0.6); */
+	  background: radial-gradient(
+	    circle at 100%,
+	    rgba(0, 0, 0, 0.8),
+	    rgba(0, 0, 0, 0.1) 50%,
+	    rgba(0, 0, 0, 0.1) 50%,
+	    rgba(0, 0, 0, 0.8) 75%
+	  );
 	}
 
 	.pin-r-custom {
