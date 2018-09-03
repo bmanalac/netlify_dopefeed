@@ -21,7 +21,7 @@
   export default {
     data: () => {
       return {
-        devMode: true
+        devMode: false
       };
     },
     components: {
