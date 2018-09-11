@@ -5,9 +5,9 @@
     
     <div v-else>
     
-      <Nav/>
+      <Nav />
     
-      <nuxt/>
+      <nuxt />
     
     </div>
   
@@ -17,11 +17,11 @@
 <script>
   import Nav from "../components/Nav.vue";
   import Landing from "../components/Landing.vue";
-
+  
   export default {
     data: () => {
       return {
-        devMode: false
+        devMode: true
       };
     },
     components: {

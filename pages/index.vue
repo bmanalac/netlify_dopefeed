@@ -5,8 +5,6 @@
 
 		<div class="bundle__container md:border-b border-solid border-white-dark">
 
-			<!-- <HeroRelated class="bundle-sub-feature my-4" /> -->
-
 			<Utility class="bundle-feature-2" />
 
 			<LatestPosts class="bundle-feature-3 bg-grey-lighter" />
@@ -21,7 +19,6 @@
 
 <script>
 	import Hero from "~/components/Hero.vue";
-	import HeroRelated from "~/components/HeroRelated.vue";
 	import Utility from "~/components/Utility.vue";
 	import LatestPosts from "~/components/LatestPosts.vue";
 	import Footer from "~/components/Footer.vue";
@@ -29,7 +26,6 @@
 	export default {
 	  components: {
 	    Hero,
-	    HeroRelated,
 	    Utility,
 	    LatestPosts,
 	    Footer

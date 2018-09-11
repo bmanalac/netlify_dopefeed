@@ -1,11 +1,25 @@
 <template>
-    <footer class="footer">
+    <footer class="flex flex-col bg-black py-4 md:p-8">
 
-        <div class="footer__container text-white-dark bg-black p-4 h-48">
+        <div class="flex flex-col items-center w-full">
 
-            <div class="language-utility">Translations</div>
+            <h1 class="title text-white-dark text-center p-4">Logo</h1>
 
-            <div class="resources-menu text-xs">
+            <div class="social-media flex flex-row text-black px-4 py-2 border border-white-dark rounded-l-full rounded-r-full">
+
+                <a class="media__container mx-4" v-for="(media, index) in socialMedia" :key="index" :href="`http://www.${media}.com/`" target="_blank">
+
+                    <img class="w-full" :src="getImgUrl(media)" :alt="media">
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="flex flex-row items-center justify-around text-white-dark w-full p-4">
+
+            <div class="resources-menu flex flex-col p-4 text-xs">
 
                 <h2 class="mb-4">Resources</h2>
 
@@ -19,6 +33,8 @@
 
             </div>
 
+            <div class="logo p-4 text-lg">Logo</div>
+
         </div>
 
     </footer>
@@ -26,19 +42,22 @@
 
 <script>
     export default {
+      data: function() {
+        return {
+          socialMedia: ["facebook", "instagram", "pinterest", "twitter"]
+        };
+      },
+      methods: {
+        getImgUrl(name) {
+          const images = require.context("../assets/svg/", false, /\.(png|svg)$/);
+          return images("./" + name + "-brands.svg");
+        }
+      }
     };
 </script>
 
 <style scoped>
-    .footer__container {
-      display: grid;
-      grid-template: auto / 1fr 1fr;
-      height: 70vh;
-    }
-
-    .resources-menu {
-      display: grid;
-      grid-template: auto / minmax(100px, 1fr);
-      grid-gap: 10px;
-    }
+.social-media {
+    width: 14rem;
+}
 </style>
