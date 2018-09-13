@@ -13,7 +13,7 @@
 
         </div>
 
-        <div class="sidreail-posts__list p-4 border-b" v-for="(post, index) in latestpostlist" :key="index">
+        <div class="sidreail-posts__list p-4" v-for="(post, index) in latestpostlist" :key="index">
 
             <h1>{{ post.title }}</h1>
 

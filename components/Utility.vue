@@ -1,9 +1,9 @@
 <template>
-	<div class="senary-utility__container relative w-full">
+	<div class="utility__container relative w-full">
 
-		<div class="flex flex-row w-full md:flex-col" v-for="(post, index) in utilitypost" :key="index">
+		<div class="relative flex flex-row w-full md:flex-col" v-for="(post, index) in utilitypost" :key="index">
 
-			<nuxt-link class="block overflow-hidden w-1/2 h-full md:w-full" to="/gallery">
+			<div class="block overflow-hidden w-full h-full">
 
 				<div class="styled-responsive-image w-full h-full">
 
@@ -11,18 +11,18 @@
 
 				</div>
 
-			</nuxt-link>
+			</div>
 
-			<div class="utility-card__details w-full px-6 py-8 border-b md:border-t-0 md:border-r md:border-b-0 border-solid border-white-dark md:h-48" v-bind:class="(index === 0) ? 'border-t' : null">
+			<div class="utility-card__details absolute px-6 py-8 w-full h-full">
 
-				<nuxt-link class="flex-row justify-between text-black p-0" to="/gallery">
+				<div class="block absolute pin-b text-black p-0">
 
-					<h2 class="text-sm md:text-base font-Noto border-b border-transparent hover:border-black hover:border-solid hover:border-0">{{ post.title }}
+					<h2 class="inline box-shadow-black leading-tight md:leading-normal text-white-dark text-base font-Noto border-b border-transparent hover:border-black hover:border-solid hover:border-0">{{ post.title }}
 					</h2>
 
-					<span class="font-normal font-Noto text-base">Author Title</span>
+					<span class="box-shadow-red table bg-red-light font-normal font-Noto text-white text-sm">Category</span>
 
-				</nuxt-link>
+				</div>
 
 			</div>
 
@@ -85,30 +85,49 @@
 </script>
 
 <style scoped>
-	.senary-utility__container {
+	.box-shadow-black {
+		background: rgba(0, 0, 0, .8);
+	  box-shadow: 0.25rem 0 0 rgba(0, 0, 0, 0.8), -0.25rem 0 0 rgba(0, 0, 0, 0.8);
+	  box-decoration-break: clone;
+	}
+
+	.box-shadow-red {
+	  box-shadow: 0.25rem 0 0 rgba(239, 87, 83, 0.8), -0.25rem 0 0 rgba(239, 87, 83, 0.8);
+	  box-decoration-break: clone;
+	}
+
+	.utility__container {
 	  display: grid;
+	  /* grid-gap: 0.25rem; */
 	}
 
-	h2 {
-	  transition: border-bottom ease-in-out 1s;
-	}
+	/* @media (max-width: 358px) {
+		  .styled-responsive-image {
+		    padding-top: 120px;
+		  }
+		} */
 
-	@media (max-width: 358px) {
+	@media (max-width: 767px) {
+	  .utility__container {
+	    grid-template: auto / repeat(2, minmax(100px, 1fr));
+	    grid-auto-flow: row;
+	  }
+
 	  .styled-responsive-image {
-	    padding-top: 120px;
+	    padding-top: 100%;
 	  }
 	}
 
 	@media (min-width: 768px) {
-	  .senary-utility__container {
-	    grid-template: auto / repeat(3, minmax(100px, 1fr));
+	  .utility__container {
+	    grid-template: auto / repeat(2, minmax(100px, 1fr));
 	    grid-auto-flow: row;
 	  }
 	}
 
 	@media (min-width: 992px) {
-	  .senary-utility__container {
-	    grid-template: auto / repeat(2, 1fr);
+	  .utility__container {
+	    grid-template: auto / repeat(3, 1fr);
 	  }
 	}
 </style>

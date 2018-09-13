@@ -3,7 +3,7 @@
 
 		<Hero class="bundle-feature-1" />
 
-		<div class="bundle__container md:border-b border-solid border-white-dark">
+		<div class="bundle__container">
 
 			<Utility class="bundle-feature-2" />
 
