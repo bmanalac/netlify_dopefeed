@@ -1,6 +1,10 @@
 <template>
 	<div class="landing__container relative overflow-hidden h-screen">
 
+		<Login v-on:click="isActive = !isActive" class="absolute pin-t pin-r z-10" v-bind:class="{ active: isActive }" />
+
+		<Login-form class="login-form absolute z-20" v-bind:class="{ active: isActive }" />
+
 		<div class="landing-shadow border-4 border-black p-4 mx-1 z-10">
 
 			<div class="landing-details text-center p-4 border-4 border-black">
@@ -18,18 +22,39 @@
 </template>
 
 <script>
+	import Login from "./Login.vue";
+	import LoginForm from "./LoginForm.vue";
+
 	export default {
-	  data: () => {
+	  data: function() {
 	    return {
+	      isActive: false,
 	      image:
 	        "https://images.unsplash.com/photo-1483137140003-ae073b395549?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1e392896fc645f9fc3797c9bb7dab4d3&auto=format&fit=crop&w=1950&q=80",
 	      alt: "prepped food on yellow table"
 	    };
 	  },
+	  components: {
+	    Login,
+	    LoginForm
+	  }
 	};
 </script>
 
 <style scoped>
+	.login-form {
+	  display: grid;
+	  grid-template: auto / auto;
+	  transition: 0.4s;
+	  align-self: center;
+	  transform: translateX(-100%);
+	}
+
+	.active.login-form {
+	  justify-self: center;
+	  transform: translateX(0);
+	}
+
 	.landing__container {
 	  display: grid;
 	  grid-template-areas: "a";
