@@ -7,7 +7,7 @@
 
 		<Login-form class="login-form absolute z-20" v-bind:class="{ active: isActive }" />
 
-		<div class="landing-shadow border-4 border-black p-4 mx-1 z-10">
+		<div class="landing-shadow border-4 border-black p-4 mx-8 sm:mx-4 z-10">
 
 			<div class="landing-details text-center p-4 border-4 border-black">
 
@@ -47,12 +47,14 @@
 	.login-form {
 	  display: grid;
 	  grid-template: auto / auto;
-	  transition: 0.4s;
 	  align-self: center;
 	  transform: translateX(-100%);
+	  transition: 0.4s ease;
+		opacity: 0;
 	}
 
 	.active.login-form {
+		opacity: 1;
 	  justify-self: center;
 	  transform: translateX(0);
 	}
