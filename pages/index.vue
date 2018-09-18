@@ -7,7 +7,7 @@
 
 			<Utility class="bundle-feature-2" />
 
-			<LatestPosts class="bundle-feature-3 bg-grey-lighter" />
+			<Latest-posts class="bundle-feature-3 bg-grey-lighter" />
 
 		</div>
 
