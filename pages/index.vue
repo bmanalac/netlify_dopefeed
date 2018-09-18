@@ -20,14 +20,14 @@
 <script>
 	import Hero from "~/components/Hero.vue";
 	import Utility from "~/components/Utility.vue";
-	import LatestPosts from "~/components/LatestPosts.vue";
+	// import LatestPosts from "~/components/LatestPosts.vue";
 	import Footer from "~/components/Footer.vue";
 
 	export default {
 	  components: {
 	    Hero,
 	    Utility,
-	    LatestPosts,
+	    // LatestPosts,
 	    Footer
 	  }
 	};
