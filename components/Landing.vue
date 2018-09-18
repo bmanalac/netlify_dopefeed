@@ -1,7 +1,9 @@
 <template>
 	<div class="landing__container relative overflow-hidden h-screen">
 
-		<Login v-on:click="isActive = !isActive" class="absolute pin-t pin-r z-10" v-bind:class="{ active: isActive }" />
+		<div class="absolute pin-t pin-l z-20" v-on:click="isActive = !isActive">
+			<Login-btn text="Login" />
+		</div>
 
 		<Login-form class="login-form absolute z-20" v-bind:class="{ active: isActive }" />
 
@@ -22,7 +24,7 @@
 </template>
 
 <script>
-	import Login from "./Login.vue";
+	import LoginBtn from "./common/Button.vue";
 	import LoginForm from "./LoginForm.vue";
 
 	export default {
@@ -35,7 +37,7 @@
 	    };
 	  },
 	  components: {
-	    Login,
+	    LoginBtn,
 	    LoginForm
 	  }
 	};

@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     
-    <Landing v-if="devMode === false" />
+    <Landing v-if="this.$store.state.dev" />
     
     <div v-else>
     
@@ -19,16 +19,11 @@
   import Landing from "../components/Landing.vue";
   
   export default {
-    data: () => {
-      return {
-        devMode: false
-      };
-    },
     components: {
       Nav,
       Landing
     },
-    transition: "page"
+    transition: "page",
   };
 </script>
 

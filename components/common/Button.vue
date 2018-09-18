@@ -1,15 +1,17 @@
 <template>
-	<button class=" border border-black rounded-l-full rounded-r-full py-2 px-8 m-4 hover:bg-red-light hover:border-grey-light hover:text-grey-light">{{ text }}</button>
+	<button :type="type" class="border border-black rounded-l-full rounded-r-full py-1 px-8 m-4 hover:bg-green-light border-grey text-xs text-grey hover:text-black hover:border-black">{{ text }}</button>
 </template>
 
 <script>
 	export default {
-	  props: ['text']
+	  props: ["text", "type"]
 	};
 </script>
 
 <style scoped>
-	button {
-		transition: 0.4s;
+	button,
+	button:focus {
+	  outline: none;
+	  transition: 0.4s;
 	}
 </style>
