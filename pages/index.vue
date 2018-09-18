@@ -35,17 +35,17 @@
 
 <style scoped>
 	@media (min-width: 768px) {
-	  .bundle__container {
-	    display: grid;
-	    grid-template: auto / 2fr minmax(200px, 1fr);
-	    grid-template-areas: "left-util right-util";
-	  }
 	  .bundle-feature-2 {
 	    grid-area: left-util;
 	  }
 
 	  .bundle-feature-3 {
 	    grid-area: right-util;
+	  }
+	  .bundle__container {
+	    display: grid;
+	    grid-template: auto / 2fr minmax(200px, 1fr);
+	    grid-template-areas: "left-util right-util";
 	  }
 	}
 </style>
