@@ -1,51 +1,47 @@
 <template>
-	<section class="section">
+	<section class="section pt-4">
 
-		<Hero class="bundle-feature-1" />
+		<div class="something flex justify-center items-center w-full border border-grey p-16 my-8">AD or Video</div>
 
-		<div class="bundle__container">
+		<div class="hero__container flex flex-col md:flex-row my-8">
 
-			<Utility class="bundle-feature-2" />
+			<Hero class="bundle-feature-1 md:mr-2 mb-4" />
 
-			<Latest-posts class="bundle-feature-3 bg-grey-lighter" />
+			<Latest-posts class="bundle-feature-3 bg-grey-lighter mb-4 md:ml-2" />
+
+		</div>
+
+		<Utility class="bundle-feature-2 my-8" />
+
+		<div class="gallery__container flex justify-center border border-black p-8 my-8">
+
+			<h1>Gallary Feed</h1>
 
 		</div>
 
 		<Footer />
 
 	</section>
-
 </template>
 
 <script>
 	import Hero from "~/components/Hero.vue";
 	import Utility from "~/components/Utility.vue";
-	// import LatestPosts from "~/components/LatestPosts.vue";
+	import LatestPosts from "~/components/LatestPosts.vue";
 	import Footer from "~/components/Footer.vue";
 
 	export default {
 	  components: {
 	    Hero,
 	    Utility,
-	    // LatestPosts,
+	    LatestPosts,
 	    Footer
 	  }
 	};
 </script>
 
 <style scoped>
-	@media (min-width: 768px) {
-	  .bundle-feature-2 {
-	    grid-area: left-util;
-	  }
-
-	  .bundle-feature-3 {
-	    grid-area: right-util;
-	  }
-	  .bundle__container {
-	    display: grid;
-	    grid-template: auto / 2fr minmax(200px, 1fr);
-	    grid-template-areas: "left-util right-util";
-	  }
+	.something {
+	  height: 250px;
 	}
 </style>

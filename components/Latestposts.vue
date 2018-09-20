@@ -1,35 +1,25 @@
 <template>
-	<div class="siderail-posts__container relative">
+	<div class="siderail-posts__container relative w-full md:w-2/3">
 
-		<div class="siderail__header w-full text-center p-4">Something goes here</div>
+		<div class="w-full text-center p-4 my-4">Something goes here</div>
 
 		<div class="sep__zigzag relative w-5/6 mx-auto h-4"></div>
 
-		<div class="siderail__hero">
+		<div class="flex flex-col" v-for="(post, index) in latestpost" :key="index">
 
-			<div class="sidrail__hero__container p-8">
+			<div class="flex flex-row justify-center items-center p-4">
 
-				<h1 class="text-base">{{ latestposthero.title }}</h1>
+				<img class="placeholder rounded-full mr-2" src="https://via.placeholder.com/150x150" alt="placeholder image">
 
-				<span class="text-sm text-grey">{{ latestposthero.summary }}</span>
+				<div class="siderail-posts__list__container ml-2">
 
-				<span class="text-sm text-grey">{{ latestposthero.timestamp }}</span>
+					<h1 class="text-base">{{ post.title }}</h1>
 
-			</div>
+					<span class="text-sm text-grey">{{ post.summary }}</span>
 
-			<div class="sep__line relative bg-grey-light w-5/6 mx-auto"></div>
+					<span class="text-sm text-grey">{{ post.timestamp }}</span>
 
-		</div>
-
-		<div class="siderail-posts__list" v-for="(post, index) in latestpostlist" :key="index">
-
-			<div class="siderail-posts__list__container p-8">
-
-				<h1 class="text-base">{{ post.title }}</h1>
-
-				<span class="text-sm text-grey">{{ post.summary }}</span>
-
-				<span class="text-sm text-grey">{{ post.timestamp }}</span>
+				</div>
 
 			</div>
 
@@ -43,16 +33,6 @@
 
 		</div>
 
-		<div class="ad flex justify-center w-full">
-
-			<div class="ad__container p-8">
-
-				<img src="https://via.placeholder.com/250x250" alt="placeholder image">
-
-			</div>
-
-		</div>
-
 	</div>
 </template>
 
@@ -60,14 +40,14 @@
 	export default {
 	  data() {
 	    return {
-	      latestposthero: {
-	        image:
-	          "https://images.unsplash.com/photo-1518095311381-8dce8cfe3ab4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af800e993b447f2058772e005facf7fb&auto=format&fit=crop&w=1950&q=80",
-	        title: "Best Kitchen Knives",
-	        summary: "lorem ipsum text that matters",
-	        timestamp: "1 hour ago"
-	      },
-	      latestpostlist: [
+	      latestpost: [
+	        {
+	          image:
+	            "https://images.unsplash.com/photo-1518095311381-8dce8cfe3ab4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af800e993b447f2058772e005facf7fb&auto=format&fit=crop&w=1950&q=80",
+	          title: "Best Kitchen Knives",
+	          summary: "lorem ipsum text that matters",
+	          timestamp: "1 hour ago"
+	        },
 	        {
 	          image:
 	            "https://images.unsplash.com/photo-1500217052183-bc01eee1a74e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=83e5d3e676230de77a2c78f9563d1933&auto=format&fit=crop&w=1868&q=80",
@@ -89,10 +69,12 @@
 </script>
 
 <style scoped>
-	.siderail__header {
-	  margin: 32px 0;
-	  margin-top: 0;
-	  /* background: #1ba1e2; */
+	.siderail-posts__container {
+	  top: 60%;
+	}
+	.placeholder {
+	  width: 80px;
+	  height: 80px;
 	}
 	.sep__line {
 	  height: 1px;

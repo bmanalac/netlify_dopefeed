@@ -85,6 +85,10 @@
 </script>
 
 <style scoped>
+	.utility__container {
+	  display: grid;
+	}
+	
 	.box-shadow-black {
 		background: rgba(0, 0, 0, .8);
 	  box-shadow: 0.25rem 0 0 rgba(0, 0, 0, 0.8), -0.25rem 0 0 rgba(0, 0, 0, 0.8);
@@ -96,14 +100,10 @@
 	  box-decoration-break: clone;
 	}
 
-	.utility__container {
-	  display: grid;
-	}
 
 	@media (max-width: 767px) {
 	  .utility__container {
 	    grid-template: repeat(auto-fit, minmax(100px, 1fr)) / repeat(2, minmax(100px, 1fr));
-	    /* grid-auto-flow: row; */
 	  }
 
 	  .styled-responsive-image {
@@ -114,7 +114,6 @@
 	@media (min-width: 768px) {
 	  .utility__container {
 	    grid-template: repeat(auto-fit, minmax(100px, 1fr)) / repeat(2, minmax(100px, 1fr));
-	    /* grid-auto-flow: row; */
 	  }
 	}
 

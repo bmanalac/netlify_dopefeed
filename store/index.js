@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 const createStore = () => {
     return new Vuex.Store({
         state: {
-            dev: true,
+            dev: false,
             user: {
                 name: 'admin',
                 password: 'password'

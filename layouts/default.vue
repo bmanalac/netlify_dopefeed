@@ -3,7 +3,7 @@
     
     <Landing v-if="this.$store.state.dev" />
     
-    <div v-else>
+    <div v-else class="bg-grey-light px-4 lg:px-16">
     
       <Nav />
     

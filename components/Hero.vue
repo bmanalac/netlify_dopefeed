@@ -1,7 +1,7 @@
 <template>
 	<div class="relative w-full">
 
-		<div class="filter absolute z-10 pin-t pin-l w-full h-screen"></div>
+		<div class="filter absolute z-10 pin-t pin-l w-full h-full"></div>
 
 		<div class="block">
 
@@ -50,7 +50,6 @@
 
 <style scoped>
 	.filter {
-	  /* background-color: rgba(0,0,0,0.6); */
 	  background: radial-gradient(
 	    circle at 100%,
 	    rgba(0, 0, 0, 0.8),
@@ -65,7 +64,7 @@
 	}
 
 	.styled-responsive-image__custom {
-	  padding-top: 100vh;
+	  padding-top: 90%;
 	}
 
 	.title-card__head-link {
