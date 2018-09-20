@@ -1,11 +1,4 @@
-<template>
-	<div class="siderail-posts__container relative w-full md:w-2/3">
-
-		<div class="w-full text-center p-4 my-4">Something goes here</div>
-
-		<div class="sep__zigzag relative w-5/6 mx-auto h-4"></div>
-
-		<div class="flex flex-col" v-for="(post, index) in latestpost" :key="index">
+		<!-- <div class="flex flex-col" v-for="(post, index) in latestpost" :key="index">
 
 			<div class="flex flex-row justify-center items-center p-4">
 
@@ -25,7 +18,14 @@
 
 			<div class="sep__line relative bg-grey-light w-5/6 mx-auto"></div>
 
-		</div>
+		</div> -->
+<template>
+	<div class="siderail-posts__container relative w-full md:w-2/3">
+
+		<div class="w-full text-center p-4 my-4">Something goes here</div>
+
+		<div class="sep__zigzag relative w-5/6 mx-auto h-4"></div>
+
 
 		<div class="view-post__container w-full text-center pt-8 px-4">
 
