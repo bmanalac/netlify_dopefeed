@@ -7,7 +7,7 @@
 
 			<Hero class="bundle-feature-1 md:mr-2 mb-4" />
 
-			<Latestposts class="bundle-feature-3 bg-grey-lighter mb-4 md:ml-2" />
+			<Latest-Posts class="bundle-feature-3 bg-grey-lighter mb-4 md:ml-2" />
 
 		</div>
 
@@ -34,7 +34,7 @@
 	  components: {
 	    Hero,
 	    Utility,
-	    Latestposts,
+	    'Latest-posts': Latestposts,
 	    Footer
 	  }
 	};
