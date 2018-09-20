@@ -7,7 +7,7 @@
 
 			<Hero class="bundle-feature-1 md:mr-2 mb-4" />
 
-			<Latest-posts class="bundle-feature-3 bg-grey-lighter mb-4 md:ml-2" />
+			<Latestposts class="bundle-feature-3 bg-grey-lighter mb-4 md:ml-2" />
 
 		</div>
 
@@ -27,14 +27,14 @@
 <script>
 	import Hero from "~/components/Hero.vue";
 	import Utility from "~/components/Utility.vue";
-	import LatestPosts from "~/components/LatestPosts.vue";
+	import Latestposts from "~/components/Latestposts.vue";
 	import Footer from "~/components/Footer.vue";
 
 	export default {
 	  components: {
 	    Hero,
 	    Utility,
-	    LatestPosts,
+	    Latestposts,
 	    Footer
 	  }
 	};

@@ -28,7 +28,7 @@
 	import LoginForm from "./LoginForm.vue";
 
 	export default {
-	  data: function() {
+	  data() {
 	    return {
 	      isActive: false,
 	      image:
