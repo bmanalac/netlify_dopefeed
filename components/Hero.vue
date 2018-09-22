@@ -1,88 +1,184 @@
 <template>
-	<div class="relative w-full">
+    <div class="relative hero-bundle__container w-full">
 
-		<div class="filter absolute z-10 pin-t pin-l w-full h-full"></div>
+        <!-- <div class=" absolute z-10 pin-t pin-l w-full h-full"></div> -->
 
-		<div class="block">
+        <div :class="`hero-post post-${index} relative shadow-md overflow-hidden`" v-for="(post, index) in featured" :key="index">
 
-			<div class="styled-responsive-image__custom block">
+            <div class="styled-responsive-image block h-full">
 
-				<img class="styled-responsive-image__img" :src="featured.img" :alt="featured.alt">
+                <img class="styled-responsive-image__img" :src="post.img" :alt="post.alt">
 
-			</div>
+            </div>
 
-			<nuxt-link to="/gallery" class="block absolute z-20 pin-b pin-l pin-r-custom text-white pt-0 pl-8 md:pl-16 pb-20 overflow-hidden">
+            <nuxt-link to="/gallery" class="block absolute z-20 pin-b pin-l pin-r-custom text-white pt-0 pl-2 pb-2 ml-2 overflow-hidden">
 
-				<span class="title-card__details-group table bg-red-light font-noto text-base mb-px -ml-4 p-2">{{ featured.category }}</span>
+                <span class="box-shadow-red table font-noto text-base py-1 md:py-1 md:mb-2">{{ post.category }}</span>
 
-				<h1 class="title-card__head-link inline font-oswald text-2xl sm:text-3xl md:text-4xl leading-loose">{{ featured.title }}</h1>
+                <h1 class="box-shadow-black inline font-oswald text-2xl md:text-2xl">{{ post.title }}</h1>
 
-				<ContentTypeBtn class="title-card__content-type-btn table mt-px py-2" />
+                <ContentTypeBtn class="box-shadow-red table text-base py-1 md:mt-2" />
 
-			</nuxt-link>
+            </nuxt-link>
 
-		</div>
+        </div>
 
-	</div>
+    </div>
 </template>
 
 <script>
-	import ContentTypeBtn from "../components/common/ContentTypeBtn.vue";
+    import ContentTypeBtn from "../components/common/ContentTypeBtn.vue";
 
-	export default {
-	  components: {
-	    ContentTypeBtn
-	  },
-	  data: () => {
-	    return {
-	      featured: {
-	        category: "New Arrivals",
-	        title: "Hipster Ipsum Junk food that fucks back",
-	        summary: "Lorem ipsum dolor amet tote bag tilde butcher hammock.",
-	        img:
-	          "https://images.unsplash.com/photo-1485704686097-ed47f7263ca4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3a0347e68dba64f130c186dc3f396ea&auto=format&fit=crop&w=1969&q=80",
-	        alt: "alt-text"
-	      }
-	    };
-	  }
-	};
+    export default {
+      components: {
+        ContentTypeBtn
+      },
+      data() {
+        return {
+          featured: [
+            {
+              category: "New Arrivals",
+              title: "Hipster Ipsum Junk food that fucks back",
+              summary: "Lorem ipsum dolor amet tote bag tilde butcher hammock.",
+              img:
+                "https://images.unsplash.com/photo-1485704686097-ed47f7263ca4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3a0347e68dba64f130c186dc3f396ea&auto=format&fit=crop&w=1969&q=80",
+              alt: "alt-text"
+            },
+            {
+              category: "New Arrivals",
+              title: "Hipster Ipsum Junk food that fucks back",
+              summary: "Lorem ipsum dolor amet tote bag tilde butcher hammock.",
+              img:
+                "https://images.unsplash.com/photo-1485704686097-ed47f7263ca4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3a0347e68dba64f130c186dc3f396ea&auto=format&fit=crop&w=1969&q=80",
+              alt: "alt-text"
+            },
+            {
+              category: "New Arrivals",
+              title: "Hipster Ipsum Junk food that fucks back",
+              summary: "Lorem ipsum dolor amet tote bag tilde butcher hammock.",
+              img:
+                "https://images.unsplash.com/photo-1485704686097-ed47f7263ca4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3a0347e68dba64f130c186dc3f396ea&auto=format&fit=crop&w=1969&q=80",
+              alt: "alt-text"
+            },
+            {
+              category: "New Arrivals",
+              title: "Hipster Ipsum Junk food that fucks back",
+              summary: "Lorem ipsum dolor amet tote bag tilde butcher hammock.",
+              img:
+                "https://images.unsplash.com/photo-1485704686097-ed47f7263ca4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3a0347e68dba64f130c186dc3f396ea&auto=format&fit=crop&w=1969&q=80",
+              alt: "alt-text"
+            },
+            {
+              category: "New Arrivals",
+              title: "Hipster Ipsum Junk food that fucks back",
+              summary: "Lorem ipsum dolor amet tote bag tilde butcher hammock.",
+              img:
+                "https://images.unsplash.com/photo-1485704686097-ed47f7263ca4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3a0347e68dba64f130c186dc3f396ea&auto=format&fit=crop&w=1969&q=80",
+              alt: "alt-text"
+            }
+          ]
+        };
+      }
+    };
 </script>
 
 <style scoped>
-	.filter {
-	  background: radial-gradient(
-	    circle at 100%,
-	    rgba(0, 0, 0, 0.8),
-	    rgba(0, 0, 0, 0.1) 50%,
-	    rgba(0, 0, 0, 0.1) 50%,
-	    rgba(0, 0, 0, 0.8) 75%
-	  );
-	}
+    .hero-bundle__container {
+      display: grid;
+      grid-template: repeat(6, minmax(auto, 200px)) / 1fr;
+      grid-gap: 1rem;
+      grid-template-areas:
+        "p0"
+        "p0"
+        "p1"
+        "p2"
+        "p3"
+        "p4";
+    }
 
-	.pin-r-custom {
-	  right: 12%;
-	}
+    .post-0 {
+      grid-area: p0;
+    }
+    .post-1 {
+      grid-area: p1;
+    }
+    .post-2 {
+      grid-area: p2;
+    }
+    .post-3 {
+      grid-area: p3;
+    }
+    .post-4 {
+      grid-area: p4;
+    }
 
-	.styled-responsive-image__custom {
-	  padding-top: 90%;
-	}
+    @media (min-width: 576px) and (max-width: 899px) {
+      .hero-bundle__container {
+        grid-template: repeat(3, minmax(auto, 200px)) / repeat(2, 1fr);
+        grid-template-areas:
+          "p0 p0"
+          "p1 p2"
+          "p3 p4";
+      }
+    }
 
-	.title-card__head-link {
-	  background: rgba(0, 0, 0, 0.8);
-	  box-shadow: 1rem 0 0 rgba(0, 0, 0, 0.8), -1rem 0 0 rgba(0, 0, 0, 0.8);
-	  box-decoration-break: clone;
-	}
+    /* md */
+    @media (min-width: 900px) {
+      .hero-bundle__container {
+        grid-template: repeat(4, minmax(100px, auto)) / repeat(7, 1fr);
+        grid-template-areas:
+          "p0 p0 p0 p1 p1 p2 p2"
+          "p0 p0 p0 p1 p1 p4 p4"
+          "p0 p0 p0 p1 p1 p4 p4"
+          "p0 p0 p0 p3 p3 p4 p4"
+          "p0 p0 p0 p3 p3 p4 p4";
+      }
+    }
 
-	/* ContentTypeBtn Component Styles */
-	.title-card__content-type-btn {
-	  background-color: rgba(0, 0, 0, 0.8);
-	  box-shadow: 1rem 0 0 rgba(0, 0, 0, 0.8), -1rem 0 0 rgba(0, 0, 0, 0.8);
-	}
+    h1 {
+        line-height: 1.75;
+    }
 
-	@media (max-width: 578px) {
-	  .title-card__head-link {
-	    line-height: 1.6;
-	  }
-	}
+    .filter {
+      background: radial-gradient(
+        circle at 100%,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0.8) 75%
+      );
+    }
+
+    .pin-r-custom {
+      right: 12%;
+    }
+
+    .styled-responsive-image__custom {
+      padding-top: 90%;
+    }
+
+    .box-shadow-black {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 1rem 0 0 rgba(0, 0, 0, 0.8), -1rem 0 0 rgba(0, 0, 0, 0.8);
+      box-decoration-break: clone;
+    }
+
+    .box-shadow-red {
+      background: rgba(239, 87, 83, 0.8);
+      box-shadow: 1rem 0 0 rgba(239, 87, 83, 0.8), -1rem 0 0 rgba(239, 87, 83, 0.8);
+      box-decoration-break: clone;
+    }
+
+    .title-card__head-link {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 1rem 0 0 rgba(0, 0, 0, 0.8), -1rem 0 0 rgba(0, 0, 0, 0.8);
+      box-decoration-break: clone;
+    }
+
+    @media (max-width: 578px) {
+      .title-card__head-link {
+        line-height: 1.6;
+      }
+    }
 </style>
 

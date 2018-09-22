@@ -1,13 +1,13 @@
 <template>
 	<section class="section pt-4">
 
-		<div class="something flex justify-center items-center w-full border border-grey p-16 my-8">AD or Video</div>
+		<!-- <div class="something flex justify-center items-center w-full border border-grey p-16 my-8">AD or Video</div> -->
 
-		<div class="hero__container flex flex-col md:flex-row my-8">
+		<div class="hero__container flex flex-col my-8">
 
-			<Hero class="bundle-feature-1 md:mr-2 mb-4" />
+			<Hero class="bundle-feature-1 mb-4" />
 
-			<Latest-posts class="bundle-feature-3 bg-grey-lighter mb-4 md:ml-2" />
+			<Latest-posts class="bundle-feature-3 bg-grey-lighter mb-4" />
 
 		</div>
 
