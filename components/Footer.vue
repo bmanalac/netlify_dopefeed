@@ -57,7 +57,11 @@
 </script>
 
 <style scoped>
-.social-media {
-    width: 14rem;
-}
+    .social-media {
+      width: 14rem;
+    }
+
+    img {
+      height: 25px;
+    }
 </style>

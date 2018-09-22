@@ -3,11 +3,11 @@
     
     <Landing v-if="this.$store.state.dev" />
     
-    <div v-else class="bg-grey-light px-4 lg:px-16">
+    <div v-else>
     
       <Nav />
     
-      <nuxt />
+      <nuxt class="bg-white-dark pt-8 px-4 lg:px-16" />
     
     </div>
   

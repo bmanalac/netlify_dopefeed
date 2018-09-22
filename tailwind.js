@@ -221,7 +221,7 @@ module.exports = {
       'Oswald',
       'sans-serif',
     ],
-    'quattrocento': [
+    'quat': [
       'Quattrocento Sans',
       'sans-serif',
     ],
