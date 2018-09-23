@@ -30,54 +30,13 @@
     import ContentTypeBtn from "../components/common/ContentTypeBtn.vue";
 
     export default {
-      components: {
-        ContentTypeBtn
-      },
       data() {
         return {
-          featured: [
-            {
-              category: "New Arrivals",
-              title: "Hipster Ipsum Junk food that fucks back",
-              summary: "Lorem ipsum dolor amet tote bag tilde butcher hammock.",
-              img:
-                "https://images.unsplash.com/photo-1485704686097-ed47f7263ca4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3a0347e68dba64f130c186dc3f396ea&auto=format&fit=crop&w=1969&q=80",
-              alt: "alt-text"
-            },
-            {
-              category: "New Arrivals",
-              title: "Hipster Ipsum Junk food that fucks back",
-              summary: "Lorem ipsum dolor amet tote bag tilde butcher hammock.",
-              img:
-                "https://images.unsplash.com/photo-1485704686097-ed47f7263ca4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3a0347e68dba64f130c186dc3f396ea&auto=format&fit=crop&w=1969&q=80",
-              alt: "alt-text"
-            },
-            {
-              category: "New Arrivals",
-              title: "Hipster Ipsum Junk food that fucks back",
-              summary: "Lorem ipsum dolor amet tote bag tilde butcher hammock.",
-              img:
-                "https://images.unsplash.com/photo-1485704686097-ed47f7263ca4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3a0347e68dba64f130c186dc3f396ea&auto=format&fit=crop&w=1969&q=80",
-              alt: "alt-text"
-            },
-            {
-              category: "New Arrivals",
-              title: "Hipster Ipsum Junk food that fucks back",
-              summary: "Lorem ipsum dolor amet tote bag tilde butcher hammock.",
-              img:
-                "https://images.unsplash.com/photo-1485704686097-ed47f7263ca4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3a0347e68dba64f130c186dc3f396ea&auto=format&fit=crop&w=1969&q=80",
-              alt: "alt-text"
-            },
-            {
-              category: "New Arrivals",
-              title: "Hipster Ipsum Junk food that fucks back",
-              summary: "Lorem ipsum dolor amet tote bag tilde butcher hammock.",
-              img:
-                "https://images.unsplash.com/photo-1485704686097-ed47f7263ca4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b3a0347e68dba64f130c186dc3f396ea&auto=format&fit=crop&w=1969&q=80",
-              alt: "alt-text"
-            }
-          ]
+          featured: this.$store.state.herostore
         };
+      },
+      components: {
+        ContentTypeBtn
       }
     };
 </script>
@@ -136,7 +95,7 @@
     }
 
     h1 {
-        line-height: 1.75;
+      line-height: 1.75;
     }
 
     .filter {

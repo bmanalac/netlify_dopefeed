@@ -1,4 +1,5 @@
 import Vuex from 'vuex'
+import DummyData from './dummyData.js'
 
 const createStore = () => {
     return new Vuex.Store({
@@ -7,7 +8,10 @@ const createStore = () => {
             user: {
                 name: 'admin',
                 password: 'password'
-            }
+            },
+            herostore: DummyData.hero,
+            lateststore: DummyData.latestpost,
+            utilitystore: DummyData.utilitypost
         },
         getters: {},
         mutations: {

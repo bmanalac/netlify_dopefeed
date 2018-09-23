@@ -40,29 +40,7 @@
 	export default {
 	  data() {
 	    return {
-	      latestpost: [
-	        {
-	          image:
-	            "https://images.unsplash.com/photo-1518095311381-8dce8cfe3ab4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af800e993b447f2058772e005facf7fb&auto=format&fit=crop&w=1950&q=80",
-	          title: "Best Kitchen Knives",
-	          summary: "lorem ipsum text that matters",
-	          timestamp: "1 hour ago"
-	        },
-	        {
-	          image:
-	            "https://images.unsplash.com/photo-1500217052183-bc01eee1a74e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=83e5d3e676230de77a2c78f9563d1933&auto=format&fit=crop&w=1868&q=80",
-	          title: "Summer Cocktails",
-	          summary: "lorem ipsum text that matters",
-	          timestamp: "1 hour ago"
-	        },
-	        {
-	          image:
-	            "https://images.unsplash.com/photo-1469533802599-76ee5be68f7d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eb20b626fbff1065f1e7402e7675d9d2&auto=format&fit=crop&w=1950&q=80",
-	          title: "Upcoming Vineyards To Try",
-	          summary: "lorem ipsum text that matters",
-	          timestamp: "1 hour ago"
-	        }
-	      ]
+	      latestpost: this.$store.state.lateststore
 	    };
 	  }
 	};
