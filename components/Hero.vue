@@ -45,7 +45,6 @@
     .hero-bundle__container {
       display: grid;
       grid-template: repeat(6, minmax(auto, 200px)) / 1fr;
-      grid-gap: 1rem;
       grid-template-areas:
         "p0"
         "p0"
@@ -74,6 +73,7 @@
     @media (min-width: 576px) and (max-width: 899px) {
       .hero-bundle__container {
         grid-template: repeat(3, minmax(auto, 200px)) / repeat(2, 1fr);
+        grid-gap: 0.5rem;
         grid-template-areas:
           "p0 p0"
           "p1 p2"
@@ -85,6 +85,7 @@
     @media (min-width: 900px) {
       .hero-bundle__container {
         grid-template: repeat(4, minmax(100px, auto)) / repeat(7, 1fr);
+        grid-gap: 1rem;
         grid-template-areas:
           "p0 p0 p0 p1 p1 p2 p2"
           "p0 p0 p0 p1 p1 p4 p4"

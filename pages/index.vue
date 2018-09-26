@@ -1,47 +1,45 @@
 <template>
-	<section class="section pt-4">
+    <section class="section">
 
-		<!-- <div class="something flex justify-center items-center w-full border border-grey p-16 my-8">AD or Video</div> -->
+        <div class="hero__container flex flex-col pt-8">
 
-		<div class="hero__container flex flex-col my-8">
+            <Hero class="bundle-feature-1 mb-8 md:mb-32" />
 
-			<Hero class="bundle-feature-1 mb-4" />
+            <Latest-posts class="bundle-feature-3 mb-8 md:mb-32" />
 
-			<Latest-posts class="bundle-feature-3 bg-grey-lighter mb-4" />
+        </div>
 
-		</div>
+        <Utility class="bundle-feature-2 mb-8 md:mb-32" />
 
-		<Utility class="bundle-feature-2 my-8" />
+        <div class="gallery__container flex justify-center border border-black p-8 mb-8 md:mb-32">
 
-		<div class="gallery__container flex justify-center border border-black p-8 my-8">
+            <h1>Gallary Feed</h1>
 
-			<h1>Gallary Feed</h1>
+        </div>
 
-		</div>
+        <Footer />
 
-		<Footer />
-
-	</section>
+    </section>
 </template>
 
 <script>
-	import Hero from "~/components/Hero.vue";
-	import Utility from "~/components/Utility.vue";
-	import Latestposts from "~/components/Latestposts.vue";
-	import Footer from "~/components/Footer.vue";
+    import Hero from "~/components/Hero.vue";
+    import Utility from "~/components/Utility.vue";
+    import Latestposts from "~/components/Latestposts.vue";
+    import Footer from "~/components/Footer.vue";
 
-	export default {
-	  components: {
-	    Hero,
-	    Utility,
-	    'Latest-posts': Latestposts,
-	    Footer
-	  }
-	};
+    export default {
+      components: {
+        Hero,
+        Utility,
+        "Latest-posts": Latestposts,
+        Footer
+      }
+    };
 </script>
 
 <style scoped>
-	.something {
-	  height: 250px;
-	}
+    .something {
+      height: 250px;
+    }
 </style>

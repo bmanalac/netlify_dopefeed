@@ -1,13 +1,15 @@
 <template>
-    <section id="gallery">
+    <section>
+
         <h1>this is the gallery page</h1>
+    
     </section>
 </template>
 
 <script>
-export default {
-    head: {
-        title: 'Dopefeed Gallery Page'
-    }
-}
+    export default {
+      head: {
+        title: "Dopefeed Gallery Page"
+      }
+    };
 </script>

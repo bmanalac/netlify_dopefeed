@@ -7,7 +7,7 @@
     
       <Nav />
     
-      <nuxt class="bg-white-dark pt-8 px-0 sm:px-8 md:px-16" />
+      <nuxt class="bg-white px-0 sm:px-8 md:px-16" />
     
     </div>
   
