@@ -1,30 +1,34 @@
 <template>
-  <div class="relative">
-    
-    <Landing v-if="this.$store.state.dev" />
-    
-    <div v-else>
-    
-      <Nav />
-    
-      <nuxt class="bg-white px-0 sm:px-8 md:px-16" />
-    
+    <div class="relative">
+
+        <Landing v-if="this.$store.state.dev" />
+
+        <div v-else>
+
+            <Nav />
+
+            <nuxt class="bg-white sm:pt-8 sm:mx-4 lg:mx-32" />
+
+            <Footer />
+
+        </div>
+
     </div>
-  
-  </div>
 </template>
 
 <script>
-  import Nav from "../components/Nav.vue";
-  import Landing from "../components/Landing.vue";
-  
-  export default {
-    components: {
-      Nav,
-      Landing
-    },
-    transition: "page",
-  };
+    import Nav from "../components/Nav.vue";
+    import Landing from "../components/Landing.vue";
+    import Footer from "../components/Footer.vue";
+
+    export default {
+      components: {
+        Nav,
+        Landing,
+        Footer
+      },
+      transition: "page"
+    };
 </script>
 
 

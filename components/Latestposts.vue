@@ -49,30 +49,7 @@
           latestpost: this.$store.state.lateststore
         };
       },
-      components: { ButtonHelper: Button },
-      methods: {
-        handleScroll() {
-          const scrollable =
-            document.documentElement.scrollHeight - window.innerHeight;
-          const scrolled = window.scrollY;          
-          const siderailElHeight = document.getElementsByClassName(
-            "siderail-posts__container"
-          )[0].scrollHeight;
-
-        //   console.log(siderailElHeight)
-
-          if(scrolled > siderailElHeight) {
-              console.log('fuck');
-          }
-
-        }
-      },
-      mounted() {
-        window.addEventListener("scroll", this.handleScroll);
-      },
-      destroyed() {
-        window.removeEventListener("scroll", this.handleScroll);
-      }
+      components: { ButtonHelper: Button }
     };
 </script>
 

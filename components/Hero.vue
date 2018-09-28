@@ -1,25 +1,27 @@
 <template>
-    <div class="relative hero-bundle__container w-full">
+    <div class="hero-bundle__container sm:flex sm:flex-col w-full">
 
-        <!-- <div class=" absolute z-10 pin-t pin-l w-full h-full"></div> -->
+        <div :class="`hero-post post-${index} sticky sm:relative pin-t h-screen max-h-full sm:h-auto overflow-hidden`" v-for="(post, index) in featured" :key="index">
 
-        <div :class="`hero-post post-${index} relative shadow-md overflow-hidden`" v-for="(post, index) in featured" :key="index">
+            <div class="hero-post__container h-full">
 
-            <div class="styled-responsive-image block h-full">
+                <div class="styled-responsive-image block h-full">
 
-                <img class="styled-responsive-image__img" :src="post.img" :alt="post.alt">
+                    <img class="styled-responsive-image__img" :src="post.img" :alt="post.alt">
+
+                </div>
+
+                <nuxt-link to="/gallery" class="block absolute z-20 pin-b pin-l pin-r-custom text-white pt-0 pl-2 pb-2 ml-2 overflow-hidden">
+
+                    <span class="box-shadow-red table font-noto text-base py-1 md:py-1 md:mb-2">{{ post.category }}</span>
+
+                    <h1 class="box-shadow-black inline font-oswald text-2xl md:text-2xl">{{ post.title }}</h1>
+
+                    <ContentTypeBtn class="box-shadow-red table text-base py-1 md:mt-2" />
+
+                </nuxt-link>
 
             </div>
-
-            <nuxt-link to="/gallery" class="block absolute z-20 pin-b pin-l pin-r-custom text-white pt-0 pl-2 pb-2 ml-2 overflow-hidden">
-
-                <span class="box-shadow-red table font-noto text-base py-1 md:py-1 md:mb-2">{{ post.category }}</span>
-
-                <h1 class="box-shadow-black inline font-oswald text-2xl md:text-2xl">{{ post.title }}</h1>
-
-                <ContentTypeBtn class="box-shadow-red table text-base py-1 md:mt-2" />
-
-            </nuxt-link>
 
         </div>
 
@@ -42,18 +44,6 @@
 </script>
 
 <style scoped>
-    .hero-bundle__container {
-      display: grid;
-      grid-template: repeat(6, minmax(auto, 200px)) / 1fr;
-      grid-template-areas:
-        "p0"
-        "p0"
-        "p1"
-        "p2"
-        "p3"
-        "p4";
-    }
-
     .post-0 {
       grid-area: p0;
     }
@@ -72,7 +62,8 @@
 
     @media (min-width: 576px) and (max-width: 899px) {
       .hero-bundle__container {
-        grid-template: repeat(3, minmax(auto, 200px)) / repeat(2, 1fr);
+        display: grid;
+        grid-template: repeat(3, minmax(150px, 250px)) / repeat(2, 1fr);
         grid-gap: 0.5rem;
         grid-template-areas:
           "p0 p0"
@@ -84,7 +75,8 @@
     /* md */
     @media (min-width: 900px) {
       .hero-bundle__container {
-        grid-template: repeat(4, minmax(100px, auto)) / repeat(7, 1fr);
+        display: grid;
+        grid-template: repeat(4, minmax(150px, auto)) / repeat(7, 1fr);
         grid-gap: 1rem;
         grid-template-areas:
           "p0 p0 p0 p1 p1 p2 p2"

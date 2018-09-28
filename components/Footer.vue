@@ -1,9 +1,9 @@
 <template>
-    <footer class="flex flex-col bg-black py-4 md:p-8">
+    <footer class="flex flex-row items-center bg-black p-4">
 
-        <div class="flex flex-col items-center w-full">
+        <div class="flex items-center w-full">
 
-            <h1 class="title text-white-dark text-center p-4">Logo</h1>
+            <h1 class="title text-white-dark text-center">Logo</h1>
 
             <div class="social-media flex flex-row text-black px-4 py-2 border border-white-dark rounded-l-full rounded-r-full">
 
@@ -33,7 +33,6 @@
 
             </div>
 
-            <div class="logo p-4 text-lg">Logo</div>
 
         </div>
 
