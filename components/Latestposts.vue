@@ -1,5 +1,5 @@
 <template>
-    <div @scroll="handleScroll($event)" class="siderail-posts__container relative w-full border border-black">
+    <div @scroll.prevent="handleScroll($event)" class="siderail-posts__container relative w-full border border-black">
 
         <div class="w-full text-center p-4 mb-4">Something goes here</div>
 

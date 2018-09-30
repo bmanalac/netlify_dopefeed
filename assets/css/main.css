@@ -24,9 +24,12 @@ html {
 
 a,
 a:visited,
-a:focus {
+a:focus,
+input:focus,
+button:focus {
     /* color: initial; */
     text-decoration: none;
+    outline: none !important;
 }
 
 .page-enter-active,

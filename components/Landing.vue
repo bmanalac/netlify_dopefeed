@@ -1,11 +1,11 @@
 <template>
 	<div class="landing__container relative overflow-hidden h-screen">
 
-		<div class="absolute pin-t pin-l z-20" v-on:click="isActive = !isActive">
+		<div class="absolute pin-t pin-l z-20" @click="isActive = !isActive">
 			<Login-btn text="Login" />
 		</div>
 
-		<Login-form class="login-form absolute z-20" v-bind:class="{ active: isActive }" />
+		<Login-form class="login-form absolute z-20" :class="{ active: isActive }" />
 
 		<div class="landing-shadow border-4 border-black p-4 mx-8 sm:mx-4 z-10">
 
