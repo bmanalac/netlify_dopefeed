@@ -1,49 +1,79 @@
 <template>
     <section class="section">
 
-        <div class="hero__container sm:pt-8">
+        <!-- <Loading /> -->
 
-            <Hero class="bundle-feature-1 mb-8 md:mb-32" />
+        <div class="relative flex flex-col md:flex-row  h-screen">
+
+            <Choice-banner :details="choiceDetails.carnivore"/>
+
+            <div class="sep__container absolute flex items-center justify-center" :class="{ 'active' : sideNavActive }">
+                
+                <div class="sep-line absolute bg-black z-20"></div>
+
+                <div
+                    class="" 
+                    @click="sideNavActive = !sideNavActive">
+                    <Nav :active="sideNavActive" />
+                </div>
+            </div>
+
+            <Choice-banner  :details="choiceDetails.herbivore"/>
+
+            <div class="hidden page-arrow-down">V</div>
 
         </div>
 
-        <div class="latest-post__container">
-
-            <Latest-posts class="bundle-feature-3 mb-8 md:mb-32" />
-
-        </div>
-
-        <div class="utility-bundle__container">
-
-            <Utility class="bundle-feature-2 mb-8 md:mb-32" />
-
-        </div>
-
-        <div class="gallery__container flex justify-center border border-black p-8 mb-8 md:mb-32">
-
-            <h1>Gallary Feed</h1>
-
+        <!-- side-menu -->
+        <div @click="sideNavActive = !sideNavActive">
+            <Nav-side-menu :active="sideNavActive" />
         </div>
 
     </section>
 </template>
 
 <script>
-    import Hero from "~/components/Hero.vue";
-    import Utility from "~/components/Utility.vue";
-    import Latestposts from "~/components/Latestposts.vue";
+    import Loading from "@/components/Loading.vue";
+    import Nav from "@/components/Nav/Nav.vue";
+    import NavSideMenu from "@/components/Nav/NavSideMenu.vue";
+    import ChoiceBanner from "@/components/ChoiceBanner.vue";
 
     export default {
+      data() {
+        return {
+          choiceDetails: this.$store.state.choices,
+          sideNavActive: false
+        };
+      },
       components: {
-        Hero,
-        Utility,
-        "Latest-posts": Latestposts
+        Loading,
+        Nav,
+        NavSideMenu,
+        ChoiceBanner
       }
     };
 </script>
 
 <style scoped>
-    .something {
-      height: 250px;
+    .sep__container {
+      transition: 0.4s;
+      top: calc(50% - 25.5px);
+      left: calc(50% - 32px);
+    }
+
+    .sep__container.active {
+      transform: translate(50%, 50%);
+    }
+
+    .sep-line {
+      width: 50px;
+      height: 50px;
+      transform: rotate(45deg);
+    }
+
+    @media (max-width: 767px) {
+      .choice-image__container {
+        height: 50vh;
+      }
     }
 </style>

@@ -4,11 +4,12 @@ import DummyData from './dummyData.js'
 const createStore = () => {
     return new Vuex.Store({
         state: {
-            dev: true,
+            dev: false,
             user: {
                 name: 'admin',
                 password: 'password'
             },
+            choices: DummyData.choices,
             herostore: DummyData.hero,
             lateststore: DummyData.latestpost,
             utilitystore: DummyData.utilitypost

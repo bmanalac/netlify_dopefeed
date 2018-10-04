@@ -1,5 +1,26 @@
 export default {
+    choices: {
+        carnivore: {
+            title: "Carnivore?",
+            grammer: "noun",
+            definition: "an animal that feeds on flesh.",
+            img: "https://images.unsplash.com/photo-1532597144951-3237ed98ab3a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f22f273fc7c7b2434ccd9231c15ade1b&auto=format&fit=crop&w=1952&q=80",
+            alt: "alt-text"
+        },
+        herbivore: {
+            title: "Herbivore?",
+            grammer: "noun",
+            definition: "an animal that feeds on plants.",
+            img: "https://images.unsplash.com/photo-1525027684690-6de2d445842b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=06f55439caf82a1534bea9c55b0988dc&auto=format&fit=crop&w=1868&q=80",
+            alt: "alt-text"
+        }
+    },
     hero: [
+        {
+
+            img: "https://images.unsplash.com/photo-1494859802809-d069c3b71a8a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=304a04115ffd171fdcc04a834afff74c&auto=format&fit=crop&w=1950&q=80",
+            alt: "alt-text"
+        },
         {
             category: "New Arrivals",
             title: "Hipster Ipsum Junk food that fucks back",

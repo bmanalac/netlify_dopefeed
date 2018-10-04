@@ -23,13 +23,15 @@ html {
 }
 
 a,
-a:visited,
+a:visited {
+    /* color: initial; */
+    text-decoration: none;
+}
+
 a:focus,
 input:focus,
 button:focus {
-    /* color: initial; */
-    text-decoration: none;
-    outline: none !important;
+    outline: dashed red;
 }
 
 .page-enter-active,
