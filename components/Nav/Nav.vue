@@ -1,50 +1,43 @@
 <template>
-    <nav id="nav">
-        <div class="nav__container relative">
+    <nav id="nav" class="nav__container">
+        <!-- hamburger-menu -->
+        <div class="hamburger__container cursor-pointer p-4">
 
-            <!-- hamburger-menu -->
-            <div class="hamburger__container cursor-pointer p-4">
+            <div class="hamburger relative w-8 z-30">
 
-                <div class="hamburger relative w-8 z-20">
+                <div class="bar1 pin-t h-1 bg-red-light" :class="{ 'active': active }"></div>
 
-                    <div class="bar1 pin-t h-1 bg-red-light" :class="{ 'active': active }"></div>
+                <div class="bar2 h-1 bg-red-light my-1" :class="{ 'active opacity-0': active }"></div>
 
-                    <div class="bar2 h-1 bg-red-light my-1" :class="{ 'active opacity-0': active }">
-                        <h2 v-show="mobile" class="absolute text-red-light text-center z-0">Menu</h2>
-                    </div>
-
-                    <div class="bar3 h-1 bg-red-light" :class="{ 'active': active }"></div>
-
-                </div>
-
-            </div>
-
-            <!-- logo -->
-            <nuxt-link class="hidden logo cursor-pointer" to="/">
-
-                <div class="styled-responsive-image block w-full h-full">
-
-                    <img class="styled-responsive-image__img h-full" src="~/assets/svg/empire-brands.svg" alt="star wars empire">
-
-                </div>
-
-            </nuxt-link>
-
-            <!-- search bar -->
-            <div class="hidden search-bar__container relative">
-
-                <input class="absolute border border-grey rounded-full pl-2 pr-1 py-1 opacity-0" placeholder="Search" :class="{ 'active opacity-100': searchActive }" />
-
-                <button @click="searchActive = !searchActive">
-
-                    <i class="relative text-2xl text-grey-dark fas fa-search z-40"></i>
-
-                </button>
+                <div class="bar3 h-1 bg-red-light" :class="{ 'active': active }"></div>
 
             </div>
 
         </div>
 
+        <!-- logo -->
+        <nuxt-link class="hidden logo cursor-pointer" to="/">
+
+            <div class="styled-responsive-image block w-full h-full">
+
+                <img class="styled-responsive-image__img h-full" src="~/assets/svg/empire-brands.svg" alt="star wars empire">
+
+                </div>
+
+        </nuxt-link>
+
+        <!-- search bar -->
+        <div class="hidden search-bar__container relative">
+
+            <input class="absolute border border-grey rounded-full pl-2 pr-1 py-1 opacity-0" placeholder="Search" :class="{ 'active opacity-100': searchActive }" />
+
+            <button @click="searchActive = !searchActive">
+
+                <i class="relative text-2xl text-grey-dark fas fa-search z-40"></i>
+
+            </button>
+
+        </div>
     </nav>
 </template>
 

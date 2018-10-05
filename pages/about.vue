@@ -1,6 +1,5 @@
 <template>
     <section class="about">
-
         <div class="about__container">
 
             <div class="about-hero-image__container">
@@ -12,7 +11,6 @@
             <h1>fuck this</h1>
 
         </div>
-
     </section>
 </template>
 

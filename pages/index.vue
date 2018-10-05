@@ -1,32 +1,26 @@
 <template>
-    <section class="section">
+    <section class="section bg-black">
 
         <!-- <Loading /> -->
 
-        <div class="relative flex flex-col md:flex-row  h-screen">
-
-            <Choice-banner :details="choiceDetails.carnivore"/>
-
-            <div class="sep__container absolute flex items-center justify-center" :class="{ 'active' : sideNavActive }">
-                
-                <div class="sep-line absolute bg-black z-20"></div>
-
-                <div
-                    class="" 
-                    @click="sideNavActive = !sideNavActive">
-                    <Nav :active="sideNavActive" />
-                </div>
+        <div class="wrapper flex flex-col md:flex-row-reverse">
+            <div class="absolute md:relative w-full md:w-1/2">
+                <!-- <h1 class="text-white">Fuck</h1> -->
             </div>
 
-            <Choice-banner  :details="choiceDetails.herbivore"/>
+            <div class="flex flex-col md:flex-row bg-black w-full md:w-1/2">
 
-            <div class="hidden page-arrow-down">V</div>
+                <div class="flex flex-col w-full overflow-hidden">
 
-        </div>
+                    <Choice-banner classes="mt-8" :details="choiceDetails.carnivore" />
 
-        <!-- side-menu -->
-        <div @click="sideNavActive = !sideNavActive">
-            <Nav-side-menu :active="sideNavActive" />
+                    <Choice-banner classes="margins" :details="choiceDetails.herbivore" />
+
+                    <!-- page-down function -->
+                    <div class="hidden page-arrow-down">V</div>
+                </div>
+
+            </div>
         </div>
 
     </section>
@@ -34,43 +28,23 @@
 
 <script>
     import Loading from "@/components/Loading.vue";
-    import Nav from "@/components/Nav/Nav.vue";
-    import NavSideMenu from "@/components/Nav/NavSideMenu.vue";
     import ChoiceBanner from "@/components/ChoiceBanner.vue";
 
     export default {
       data() {
         return {
           choiceDetails: this.$store.state.choices,
-          sideNavActive: false
+          events: false
         };
       },
       components: {
         Loading,
-        Nav,
-        NavSideMenu,
         ChoiceBanner
       }
     };
 </script>
 
 <style scoped>
-    .sep__container {
-      transition: 0.4s;
-      top: calc(50% - 25.5px);
-      left: calc(50% - 32px);
-    }
-
-    .sep__container.active {
-      transform: translate(50%, 50%);
-    }
-
-    .sep-line {
-      width: 50px;
-      height: 50px;
-      transform: rotate(45deg);
-    }
-
     @media (max-width: 767px) {
       .choice-image__container {
         height: 50vh;

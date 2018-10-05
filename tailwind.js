@@ -199,17 +199,8 @@ module.exports = {
   */
 
   fonts: {
-    'caveat': [
-      'Caveat',
-      'cursive',
-    ],
     'cookie': [
       'Cookie', 
-      'Helvetica', 
-      'sans-serif',
-    ],
-    'gv': [
-      'Great Vibes',
       'Helvetica', 
       'sans-serif',
     ],
@@ -224,6 +215,14 @@ module.exports = {
     'quat': [
       'Quattrocento Sans',
       'sans-serif',
+    ],
+    'pacifico': [
+        'Pacifico', 
+        'cursive'
+    ],
+    'ost': [
+        'Old Standard TT', 
+        'serif'
     ],
     'sans': [
       'system-ui',
