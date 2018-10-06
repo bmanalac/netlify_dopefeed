@@ -1,17 +1,29 @@
 <template>
-	<button :type="type" class="border border-black rounded-l-full rounded-r-full py-1 px-8 m-4 hover:bg-green-light border-grey text-xs text-grey hover:text-black hover:border-black">{{ text }}</button>
+    <div class="bg-green-flat p-2">
+        <button :type="type" 
+                class="font-oswald border border-dotted border-white py-2 px-4 bg-green-flat text-2xl text-brown-darkest hover:text-black hover:border-black">
+                {{ textUpperCase }}
+        </button>
+    </div>
 </template>
 
 <script>
 	export default {
-	  props: ["text", "type"]
+      props: ["text", "type"],
+      computed: {
+          textUpperCase() {
+              return this.text.toUpperCase();
+          }
+      }
 	};
 </script>
 
 <style scoped>
-	button,
-	button:focus {
-	  outline: none;
-	  transition: 0.4s;
+	button {
+	  transition: all 0.4s ease-in-out;
+    }
+	
+    button:focus {
+      outline: 1px dashed yellow;
 	}
 </style>

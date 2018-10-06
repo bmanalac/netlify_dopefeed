@@ -1,12 +1,14 @@
 export default {
     choices: {
         foodie: {
+            id: 'foodie',
             title: "What's in your cookbook?",
             definition: "Chef's that strive for perfection.",
             img: "https://images.unsplash.com/photo-1532597144951-3237ed98ab3a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f22f273fc7c7b2434ccd9231c15ade1b&auto=format&fit=crop&w=1952&q=80",
             alt: "alt-text"
         },
         destination: {
+            id: 'destination',
             title: "Find your haven.",
             definition: "Explore the deep parts of the unknown.",
             img: "https://images.unsplash.com/photo-1521917441209-e886f0404a7b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c9da9e12bc69d92a619d44059a8d335f&auto=format&fit=crop&w=1900&q=80",

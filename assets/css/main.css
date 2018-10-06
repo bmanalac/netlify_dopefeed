@@ -29,8 +29,7 @@ a:visited {
 }
 
 a:focus,
-input:focus,
-button:focus {
+input:focus {
     outline: dashed red;
 }
 

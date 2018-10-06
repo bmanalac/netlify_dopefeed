@@ -4,14 +4,19 @@
         <!-- @mouseover="choiceHover = true" 
         @mouseleave="choiceHover = false" -->
 
-        <nuxt-link 
-                class="choice-image__link relative flex items-center justify-center text-white-dark bg-black w-full h-full overflow-hidden" 
-                to="/gallery">
 
-            <div class="choice-image__details absolute p-4 opacity-0 z-10" 
+        <div class="choice-image__link relative flex items-center justify-center text-white-dark bg-black w-full h-full overflow-hidden">
+            
+            <div class="absolute bg-rgba-black w-full h-screen z-10"></div>
+
+            <div class="choice-image__details absolute flex flex-col items-center p-4 opacity-0 z-10" 
                 :class="{ 'active' : choiceHover }">
-                <h1 class="font-oswald text-4xl">{{ details.title }}</h1>
-                <p class="font-quat mt-4">{{ details.definition }}</p>
+                <p class="font-quat text-xl">{{ details.definition }}</p>
+                <h1 class="font-oswald text-4xl my-8">{{ details.title }}</h1>
+        
+                <nuxt-link :to="`/gallery/${id}`">
+                    <Button-Gallery text="Gallery" />
+                </nuxt-link>
             </div>
 
             <div class="choice-image__container relative w-full h-full">
@@ -19,15 +24,21 @@
                 :src="details.img"
                 :alt="details.alt" />
             </div>
-        </nuxt-link>
+        </div>
     </div>
 </template>
 
 <script>
+    import ButtonGallery from '@/components/common/Button.vue';
+
     export default {
       props: ["details"],
+      components: {
+          ButtonGallery
+      },
       data() {
         return {
+          id: this.details.id,
           choiceHover: true
         };
       }
