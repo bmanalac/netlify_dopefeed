@@ -3,22 +3,12 @@
 
         <!-- <Loading /> -->
 
-        <div class="wrapper flex flex-col md:flex-row-reverse">
-            <div class="absolute md:relative w-full md:w-1/2">
-                <!-- <h1 class="text-white">Fuck</h1> -->
-            </div>
+        <div class="wrapper">
+            <div class="flex flex-col md:flex-row bg-black w-full h-screen md:overflow-hidden">
 
-            <div class="flex flex-col md:flex-row bg-black w-full md:w-1/2">
+                <Choice-banner :details="choiceDetails.foodie" />
 
-                <div class="flex flex-col w-full overflow-hidden">
-
-                    <Choice-banner classes="mt-8" :details="choiceDetails.carnivore" />
-
-                    <Choice-banner classes="margins" :details="choiceDetails.herbivore" />
-
-                    <!-- page-down function -->
-                    <div class="hidden page-arrow-down">V</div>
-                </div>
+                <Choice-banner :details="choiceDetails.destination" />
 
             </div>
         </div>
