@@ -19,7 +19,9 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.4.2"
+    "axios": "^0.18.0",
+    "nuxt": "^1.4.2",
+    "splitting": "^1.0.5"
   },
   "devDependencies": {
     "autoprefixer": "^9.1.0",

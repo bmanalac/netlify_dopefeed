@@ -1,5 +1,5 @@
 <template>
-    <section class="section bg-black">
+    <section class="landing bg-black">
 
         <!-- <Loading /> -->
 

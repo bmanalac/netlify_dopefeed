@@ -7,15 +7,14 @@
 
         <div class="choice-image__link relative flex items-center justify-center text-white-dark bg-black w-full h-full overflow-hidden">
             
-            <div class="absolute bg-rgba-black w-full h-screen z-10"></div>
+            <div class="absolute bg-transparent-25 w-full h-screen z-10"></div>
 
-            <div class="choice-image__details absolute flex flex-col items-center p-4 opacity-0 z-10" 
+            <div class="choice-image__details absolute flex flex-col items-center text-center p-4 opacity-0 z-10" 
                 :class="{ 'active' : choiceHover }">
-                <p class="font-quat text-xl">{{ details.definition }}</p>
                 <h1 class="font-oswald text-4xl my-8">{{ details.title }}</h1>
         
                 <nuxt-link :to="`/gallery/${id}`">
-                    <Button-Gallery text="Gallery" />
+                    <Button-Gallery :text="id" id=".gallery-btn" classes="font-cast-iron" />
                 </nuxt-link>
             </div>
 

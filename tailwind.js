@@ -45,7 +45,9 @@ View the full documentation at https://tailwindcss.com.
 
 let colors = {
   'transparent': 'transparent',
-  'rgba-black': 'rgba(0,0,0,0.5)',
+  'transparent-25': 'rgba(0,0,0,0.25)',
+  'transparent-50': 'rgba(0,0,0,0.5)',
+  'transparent-75': 'rgba(0,0,0,0.75)',
 
   'brown-darkest': '#4A2500',
   'brown-dark': '#703800',
@@ -104,13 +106,13 @@ let colors = {
   // 'teal-lighter': '#a0f0ed',
   // 'teal-lightest': '#e8fffe',
 
-  'blue-darkest': '#12283a',
-  'blue-darker': '#1c3d5a',
-  'blue-dark': '#2779bd',
-  'blue': '#3490dc',
-  'blue-light': '#6cb2eb',
-  'blue-lighter': '#bcdefa',
-  'blue-lightest': '#eff8ff',
+//   'blue-darkest': '#12283a',
+//   'blue-darker': '#1c3d5a',
+//   'blue-dark': '#2779bd',
+//   'blue': '#3490dc',
+//   'blue-light': '#6cb2eb',
+//   'blue-lighter': '#bcdefa',
+//   'blue-lightest': '#eff8ff',
 
   // 'indigo-darkest': '#191e38',
   // 'indigo-darker': '#2f365f',
@@ -206,16 +208,8 @@ module.exports = {
       'Helvetica', 
       'sans-serif',
     ],
-    'noto': [
-      'Noto Sans',
-      'sans-serif',
-    ],
     'oswald': [
       'Oswald',
-      'sans-serif',
-    ],
-    'quat': [
-      'Quattrocento Sans',
       'sans-serif',
     ],
     'pacifico': [
@@ -224,6 +218,10 @@ module.exports = {
     ],
     'ost': [
         'Old Standard TT', 
+        'serif'
+    ],
+    'cast-iron': [
+        'cast iron',
         'serif'
     ],
     'sans': [

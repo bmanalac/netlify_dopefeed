@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "cast iron";
+    src: url("../fonts/cast_iron/Cast\ Iron.ttf") format("truetype");
+}
+
 html {
     font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
@@ -33,7 +38,9 @@ input:focus {
     outline: dashed red;
 }
 
-.h1,.h2,.h3 {
+.h1,
+.h2,
+.h3 {
     color: #964B00;
 }
 

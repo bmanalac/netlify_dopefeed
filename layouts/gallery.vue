@@ -2,19 +2,15 @@
     <div class="relative bg-black">
         <Nav class="relative z-50" />
 
-        <Landing v-if="this.$store.state.dev" />
-
-        <nuxt v-else />
+        <nuxt class="pt-16" />
     </div>
 </template>
 
-<script>
-    import Landing from "../components/Landing.vue";
+<script>       
     import Nav from "@/components/Nav/index.vue";
 
     export default {
       components: {
-        Landing,
         Nav
       }
     };
