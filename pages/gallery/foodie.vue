@@ -2,9 +2,11 @@
     <section class="foodie">
         <div class="wrapper relative flex flex-col justify-center">
 
-            <div class="paginate-btn__container flex justify-between w-full lg:w-5/6 mx-auto">
-                <button class="p-4 bg-yellow text-brown-darkest" @click="prevPage" :disabled="pageNumber === 0">PrevPage</button>
-                <button class="p-4 bg-yellow text-brown-darkest" @click="nextPage" :disabled="pageNumber >= pageCount-1">NextPage</button>
+            <div class="paginate-btn__container sticky flex justify-around w-full lg:w-5/6 mx-auto z-10">
+                <Paginate-button @click.prevent="prevPage" 
+                                 :disabled="pageNumber === 0">PrevPage</Paginate-button>
+                <Paginate-button @click.prevent="nextPage" 
+                                 :disabled="pageNumber >= pageCount-1">NextPage</Paginate-button>
             </div>
 
             <div class="photo__wrapper flex flex-col justify-center w-full lg:w-5/6 mx-auto">
@@ -15,7 +17,7 @@
                         </div>
                     </a>
                     <div class="photo-card__details p-4 w-full h-full">
-                        <h1>{{ photo.title }}</h1>
+                        <h1 class="font-oswald text-xl md:text-2xl tracking-wide">{{ photo.title }}</h1>
                     </div>
                 </div>
             </div>
@@ -26,11 +28,15 @@
 
 <script>
     import axios from "axios";
+    import ButtonHelper from "@/components/common/Button.vue";
 
     export default {
       layout: "gallery",
       head: {
         title: "Dopefeed foodie Page"
+      },
+      components: {
+          'PaginateButton': ButtonHelper
       },
       computed: {
         pageCount() {
@@ -74,10 +80,18 @@
 </script>
 
 <style scoped>
+    .paginate-btn__container {
+      top: 50px;
+    }
+
     .photo__wrapper {
       display: grid;
-      grid: auto / repeat(auto, minmax(100px, 300px));
+      grid: auto-flow dense / repeat(auto-fill, minmax(300px, 1fr));
       grid-gap: 1rem;
+    }
+
+    img {
+      object-fit: cover;
     }
 </style>
 

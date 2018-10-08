@@ -1,19 +1,14 @@
 <template>
     <div class="bg-green-flat p-2">
         <button :type="type" class="border border-dotted border-white-dark py-2 px-4 bg-green-flat text-2xl text-brown-darkest hover:text-black hover:border-black" :class="classes">
-            {{ textUpperCase }}
+            <slot></slot>
         </button>
     </div>
 </template>
 
 <script>
     export default {
-      props: ["text", "type", "classes"],
-      computed: {
-        textUpperCase() {
-          return this.text.toUpperCase();
-        }
-      },
+      props: ["type", "classes"],
       beforeMount() {
         // this.setAttr(`button`, "data-splitting", "");
       },

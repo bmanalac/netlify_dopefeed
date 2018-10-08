@@ -14,7 +14,9 @@
                 <h1 class="font-oswald text-4xl my-8">{{ details.title }}</h1>
         
                 <nuxt-link :to="`/gallery/${id}`">
-                    <Button-Gallery :text="id" id=".gallery-btn" classes="font-cast-iron" />
+                    <Button-Gallery classes="font-cast-iron">
+                        <slot></slot>
+                    </Button-Gallery>
                 </nuxt-link>
             </div>
 

@@ -6,9 +6,9 @@
         <div class="wrapper">
             <div class="flex flex-col md:flex-row bg-black w-full h-screen md:overflow-hidden">
 
-                <Choice-banner :details="choiceDetails.foodie" />
+                <Choice-banner :details="choiceDetails.foodie">{{ choiceDetails.foodie.id }}</Choice-banner>
 
-                <Choice-banner :details="choiceDetails.destination" />
+                <Choice-banner :details="choiceDetails.destination">{{ choiceDetails.destination.id }}</Choice-banner>
 
             </div>
         </div>
