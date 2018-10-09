@@ -4,23 +4,22 @@
 
             <!-- nav-bar(s) -->
             <div class="nav-left-section flex-1 flex items-center bg-yellow md:bg-transparent-25" @click="sideNavActive = !sideNavActive">
-                <Nav-icon class="nav-bar flex items-center justify-center bg-yellow md:bg-transparent-25 md:hover:bg-yellow border-r border-b border-l border-yellow w-full" 
-                    :active="sideNavActive" />
+                <Nav-icon class="nav-bar flex items-center justify-center bg-yellow md:bg-transparent-25 border-r border-b border-l border-yellow w-full" :active="sideNavActive" />
 
                 <!-- subscribe-btn -->
-                <div class="nav-subscribe flex-1 flex items-center justify-center border-b border-yellow bg-yellow md:bg-transparent-25 md:hover:bg-yellow">
+                <div class="nav-subscribe flex-1 flex items-center justify-center border-b border-yellow bg-yellow md:bg-transparent-25">
                     <h1 class="md:flex hidden font-oswald text-2xl text-yellow tracking-wide">Subscribe!</h1>
                 </div>
             </div>
 
             <!-- logo -->
-            <div class="nav-logo flex-none flex items-center justify-center bg-yellow md:bg-transparent-25 md:hover:bg-yellow text-white text-center border-r border-b border-l border-yellow z-20 h-full px-4">
-                <h1 class="font-ost text-2xl">DOPEFEED</h1>
+            <div class="nav-logo flex-none flex items-center justify-center bg-yellow md:bg-transparent-25 text-white text-center border-r border-b border-l border-yellow z-20 h-full px-4">
+                <i class="fas fa-bong text-4xl text-yellow"></i>
             </div>
 
             <!-- search-bar -->
             <div class="nav-right-section flex-1 flex items-center bg-yellow md:bg-transparent-25">
-                <div class="social-media md:flex hidden justify-around border-b border-yellow bg-yellow md:bg-transparent-25 md:hover:bg-yellow w-full">
+                <div class="social-media md:flex hidden justify-around border-b border-yellow bg-yellow md:bg-transparent-25 w-full">
                     <a class="media__container relative my-auto p-1" v-for="(media, index) in socialMedia" :key="index" :href="`http://www.${media}.com/`" target="_blank">
                         <i class="text-yellow hover:text-grey-dark text-2xl" :class="`fab fa-${media}`"></i>
                     </a>
@@ -72,7 +71,8 @@
     }
 
     .nav-logo > h1 {
-        text-shadow: -1px 0 1px black, 0px 1px 1px black, 1px 0px 1px black, 0 1px 1px black;
+      text-shadow: -1px 0 1px black, 0px 1px 1px black, 1px 0px 1px black,
+        0 1px 1px black;
     }
 
     .nav-bar {

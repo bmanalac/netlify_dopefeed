@@ -2,25 +2,32 @@
     <section class="foodie">
         <div class="wrapper relative flex flex-col justify-center">
 
-            <div class="paginate-btn__container sticky flex justify-around w-full lg:w-5/6 mx-auto z-10">
-                <Paginate-button @click.prevent="prevPage" 
-                                 :disabled="pageNumber === 0">PrevPage</Paginate-button>
-                <Paginate-button @click.prevent="nextPage" 
-                                 :disabled="pageNumber >= pageCount-1">NextPage</Paginate-button>
+            <form @submit.prevent="handleSubmit" class="flex flex-row justify-center my-4">
+                <input type="text" placeholder="Search" v-model="search">
+                <button type="submit">
+                    <i class="relative text-2xl text-brown-darkest fas fa-search z-40"></i>
+                </button>
+            </form>
+
+            <div class="paginate-btn__container fixed flex flex-col items-center mx-auto z-10">
+                <button class="bg-green-flat flex-1 p-4 cursor-pointer" 
+                        @click="prevPage" 
+                        :disabled="pageNumber === 0">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+
+                <div class="flex-1 text-center p-2 w-full">
+                    <h1 class="page-number font-ost text-3xl text-black bg-green-flat p-4">{{ pageNumber }}</h1>
+                </div>
+
+                <button class="flex-1 bg-green-flat p-4 cursor-pointer" 
+                        @click="nextPage" 
+                        :disabled="pageNumber >= pageCount - 1">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
             </div>
 
-            <div class="photo__wrapper flex flex-col justify-center w-full lg:w-5/6 mx-auto">
-                <div class="photo-card__container flex flex-col bg-yellow" v-for="photo in paginatedData" :key="photo.id">
-                    <a :href="photo.url">
-                        <div class="photo-card__image relative w-full h-full">
-                            <img class="w-full h-full" :src="photo.thumbnailUrl" :alt="photo.title">
-                        </div>
-                    </a>
-                    <div class="photo-card__details p-4 w-full h-full">
-                        <h1 class="font-oswald text-xl md:text-2xl tracking-wide">{{ photo.title }}</h1>
-                    </div>
-                </div>
-            </div>
+            <Post-card :data="paginatedData" />
 
         </div>
     </section>
@@ -29,14 +36,24 @@
 <script>
     import axios from "axios";
     import ButtonHelper from "@/components/common/Button.vue";
+    import PostCard from "@/components/PostCard.vue";
 
     export default {
       layout: "gallery",
       head: {
         title: "Dopefeed foodie Page"
       },
+      data() {
+        return {
+          search: "",
+          pageNumber: 0,
+          photoData: [],
+          size: 10
+        };
+      },
       components: {
-          'PaginateButton': ButtonHelper
+        PostCard,
+        ButtonHelper
       },
       computed: {
         pageCount() {
@@ -50,24 +67,22 @@
           return this.photoData.slice(start, end);
         }
       },
-      data() {
-        return {
-          pageNumber: 0,
-          photoData: [],
-          size: 10
-        };
-      },
       created() {
-        this.asyncData("https://jsonplaceholder.typicode.com/photos");
+        this.asyncData((this.search = "photos"));
       },
       methods: {
-        async asyncData(api) {
+        async asyncData(slug) {
           try {
-            const { data } = await axios.get(`${api}`);
-            this.photoData = data;
+            const { data } = await axios.get(
+              `https://jsonplaceholder.typicode.com/${slug}`
+            );
+            return (this.photoData = data);
           } catch (e) {
             this.errors.push(e);
           }
+        },
+        handleSubmit() {
+          this.asyncData(this.search);
         },
         nextPage() {
           this.pageNumber++;
@@ -82,11 +97,12 @@
 <style scoped>
     .paginate-btn__container {
       top: 50px;
+      right: 0;
     }
 
     .photo__wrapper {
       display: grid;
-      grid: auto-flow dense / repeat(auto-fill, minmax(300px, 1fr));
+      grid: auto-flow / repeat(auto-fill, minmax(250px, 1fr));
       grid-gap: 1rem;
     }
 

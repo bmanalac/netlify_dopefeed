@@ -13,9 +13,9 @@
         // this.setAttr(`button`, "data-splitting", "");
       },
       methods: {
-        setAttr(el, attr, val) {
-          return document.querySelectorAll(el)[0].setAttribute(attr, val);
-        }
+        // setAttr(el, attr, val) {
+        //   return document.querySelectorAll(el)[0].setAttribute(attr, val);
+        // }
       }
     };
 </script>
