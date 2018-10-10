@@ -1,6 +1,6 @@
 <template>
     <div class="bg-green-flat p-2">
-        <button :type="type" class="border border-dotted border-white-dark py-2 px-4 bg-green-flat text-2xl text-brown-darkest hover:text-black hover:border-black" :class="classes">
+        <button :type="type" class="border border-dotted border-white-dark py-2 px-4 bg-green-flat text-brown-darkest hover:text-black hover:border-black" :class="classes">
             <slot></slot>
         </button>
     </div>

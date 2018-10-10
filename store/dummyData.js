@@ -1,26 +1,25 @@
 export default {
+    banner: {
+        img: "https://images.unsplash.com/photo-1457393568996-e452740c8346?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d9fcb386597db5dfa31416a5a9f1cf3f&auto=format&fit=crop&w=1950&q=80",
+        alt: "alt-text"
+    },
     choices: {
         foodie: {
-            id: 'foodie',
-            title: "What's in your cookbook?",
+            id: "Cookbook",
+            title: 'Foodie',
             definition: "Chef's that strive for perfection.",
             img: "https://images.unsplash.com/photo-1532597144951-3237ed98ab3a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f22f273fc7c7b2434ccd9231c15ade1b&auto=format&fit=crop&w=1952&q=80",
             alt: "alt-text"
         },
         destination: {
-            id: 'destination',
-            title: "Find your haven.",
+            id: "Haven",
+            title: 'Destination',
             definition: "Explore the deep parts of the unknown.",
             img: "https://images.unsplash.com/photo-1521917441209-e886f0404a7b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c9da9e12bc69d92a619d44059a8d335f&auto=format&fit=crop&w=1900&q=80",
             alt: "alt-text"
         }
     },
     hero: [
-        {
-
-            img: "https://images.unsplash.com/photo-1494859802809-d069c3b71a8a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=304a04115ffd171fdcc04a834afff74c&auto=format&fit=crop&w=1950&q=80",
-            alt: "alt-text"
-        },
         {
             category: "New Arrivals",
             title: "Hipster Ipsum Junk food that fucks back",

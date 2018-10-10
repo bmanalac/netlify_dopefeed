@@ -1,6 +1,6 @@
 <template>
     <nav id="nav" class="flex justify-center w-full">
-        <div class="fixed pin-t flex items-center w-full lg:w-5/6">
+        <div class="fixed pin-t flex items-center w-full">
 
             <!-- nav-bar(s) -->
             <div class="nav-left-section flex-1 flex items-center bg-yellow md:bg-transparent-25" @click="sideNavActive = !sideNavActive">
@@ -25,12 +25,12 @@
                     </a>
                 </div>
 
-                <div class="nav-bar flex items-center justify-center bg-yellow md:bg-transparent-25 md:hover:bg-yellow  border-r border-b border-l border-yellow-darker cursor-pointer w-full ml-auto">
+                <!-- <div class="nav-bar flex items-center justify-center bg-yellow md:bg-transparent-25 md:hover:bg-yellow  border-r border-b border-l border-yellow-darker cursor-pointer w-full ml-auto">
                     <input class="hidden absolute border border-grey rounded-full pl-2 pr-1 py-1 opacity-0" placeholder="Search" :class="{ 'active opacity-100': searchActive }" />
                     <div @click="searchActive = !searchActive">
                         <i class="relative text-xl text-brown-darkest md:text-yellow fas fa-search z-40"></i>
                     </div>
-                </div>
+                </div> -->
             </div>
 
         </div>

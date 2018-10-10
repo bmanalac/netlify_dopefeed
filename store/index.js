@@ -9,6 +9,7 @@ const createStore = () => {
                 name: 'admin',
                 password: 'password'
             },
+            bannerstore: DummyData.banner,
             choices: DummyData.choices,
             herostore: DummyData.hero,
             lateststore: DummyData.latestpost,
