@@ -1,13 +1,10 @@
 <template>
-    <div class="nav__container cursor-pointer">
-        <div class="w-8">
-
-            <div class="bar1 pin-t bg-brown-darkest md:bg-yellow" :class="{ 'active': active }"></div>
-
-            <div class="bar2 bg-brown-darkest md:bg-yellow my-1" :class="{ 'active opacity-0': active }"></div>
-
-            <div class="bar3 bg-brown-darkest md:bg-yellow" :class="{ 'active': active }"></div>
-
+    <div class="flex justify-center items-center relative cursor-pointer">
+        <div class="nav-icon__container relative w-full h-full">
+            <div class="nav-icon-dot absolute bg-white rounded-full" 
+                 :class="`nav-icon-dot-${i}`" 
+                 :style="`${styleObject(i)}`" 
+                 v-for="(dot, i) in 9" :key="i"></div>
         </div>
     </div>
 </template>
@@ -15,10 +12,34 @@
 <script>
     export default {
       props: ["active"],
+      data() {
+        return {
+          styleIcon: {
+            width: "4px",
+            height: "4px;"
+          }
+        };
+      },
+      methods: {
+        styleObject(index) {
+          if (index < 3) {
+            return `top:0%; left: calc(${index * 50}% - 2px);`;
+          } else if (index >= 3 && index <= 5) {
+            return `top:calc(50% - 2px); left: calc(${(index - 3) * 50}% - 2px);`;
+          } else {
+            return `top:calc(100% - 2px); left: calc(${(index - 6) * 50}% - 2px);`;
+          }
+        }
+      }
     };
 </script>
 
 <style scoped>
+    .nav-icon-dot {
+      width: 4px;
+      height: 4px;
+    }
+
     .bar1,
     .bar2,
     .bar3 {

@@ -1,5 +1,5 @@
 <template>
-    <div class="relative bg-white">
+    <div class="relative">
         <Nav class="relative z-50" />
 
         <nuxt class="pt-16" />

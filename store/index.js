@@ -9,19 +9,34 @@ const createStore = () => {
                 name: 'admin',
                 password: 'password'
             },
-            bannerstore: DummyData.banner,
-            choices: DummyData.choices,
-            herostore: DummyData.hero,
-            lateststore: DummyData.latestpost,
-            utilitystore: DummyData.utilitypost
+            bannerStore: DummyData.banner,
+            featuredStore: DummyData.featured,
+            arrayImgStore: DummyData.arrayImage,
         },
-        getters: {},
+        getters: {
+            getFilteredArrayImgStore(state) {
+                return state.arrayImgStore.filter((posts, i) => {
+                    if (i < 3) {
+                        return posts
+                    }
+                })
+            },
+            getFeaturedStore(state) {
+                return state.featuredStore;
+            },
+            getBannerStore(state) {
+                return state.bannerStore;
+            },
+            getArrayImgStore(state) {
+                return state.arrayImgStore;
+            }
+        },
         mutations: {
-            changeMode(state, mode) {
-                state.dev = mode;
+            changeMode(state, payload) {
+                state.dev = payload.mode;
             }
         }
-    })
+    });
 }
 
-export default createStore
+export default createStore;

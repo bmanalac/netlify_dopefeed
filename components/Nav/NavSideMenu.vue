@@ -1,5 +1,7 @@
 <template>
-    <div class="side-menu__link-list fixed pin-t flex flex-col justify-center pt-0 w-full h-screen z-20" :class="{ 'active': active, 'not-active': !sideNavActive }" @click="sideNavActive = false">
+    <div class="side-menu__link-list fixed pin-t flex flex-col justify-center pt-0 w-full h-screen z-20" 
+         :class="{ 'active': active, 'not-active': !sideNavActive }" 
+         @click="sideNavActive = false">
 
         <nuxt-link class="font-oswald text-4xl text-red-light pl-4 py-4 hover:bg-grey-lightest hover:shadow" to="/" @click="handleClick">Home</nuxt-link>
 
@@ -41,7 +43,7 @@
 <style scoped>
     .side-menu__link-list {
       transition: 0.4s;
-      background-color: rgba(224, 224, 224, 0.95);
+      background-color: rgba(0,0,0,0.9);
     }
 
     .side-menu__link-list.not-active {

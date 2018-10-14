@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-green-flat p-2">
-        <button :type="type" class="border border-dotted border-white-dark py-2 px-4 bg-green-flat text-brown-darkest hover:text-black hover:border-black" :class="classes">
+    <div class="button__container bg-green-flat hover:bg-yellow p-2">
+        <button :type="type" class="border border-dotted border-white-dark py-2 px-4 hover:bg-yellow text-brown-darkest hover:text-black hover:border-black w-full" :class="classes">
             <slot></slot>
         </button>
     </div>
@@ -21,8 +21,8 @@
 </script>
 
 <style scoped>
-    button {
-      transition: all 0.4s ease-in-out;
+    .button__container {
+      transition: all 0.6s ease-in-out;
     }
 
     button:focus {
