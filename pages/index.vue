@@ -9,6 +9,7 @@
 <script>
     import Loading from "@/components/Loading.vue";
     import Banner from "@/components/Banner.vue";
+    import About from "@/components/About.vue";
 
     export default {
       data() {
@@ -18,7 +19,8 @@
       },
       components: {
         Loading,
-        Banner
+        Banner,
+        About
       }
     };
 </script>

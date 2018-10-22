@@ -2,7 +2,7 @@
     <div class="relative">
         <Nav class="relative z-50" />
 
-        <nuxt class="pt-16" />
+        <nuxt />
     </div>
 </template>
 

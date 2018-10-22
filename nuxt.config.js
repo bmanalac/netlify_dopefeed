@@ -15,11 +15,6 @@ module.exports = {
             { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' }
         ]
     },
-    css: [
-        '~/assets/css/main.css',
-        '~/assets/css/tailwind.css',
-        '~/assets/css/splitting.js.css'
-    ],
     /*
     ** Customize the progress bar color
     */
@@ -41,5 +36,16 @@ module.exports = {
                 })
             }
         }
-    }
+    },
+    modules: ['@nuxtjs/apollo'],
+    apollo: {
+        clientConfigs: {
+            default: '~/apollo/client-configs/default.js'
+        }
+    },
+    css: [
+        '@/assets/css/main.css',
+        '@/assets/css/tailwind.css',
+        '@/assets/css/splitting.js.css'
+    ],
 }

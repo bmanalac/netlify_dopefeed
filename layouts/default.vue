@@ -1,10 +1,7 @@
 <template>
     <div class="relative">
         <Nav class="relative z-50" />
-
-        <Landing v-if="this.$store.state.dev" />
-
-        <nuxt v-else />
+        <nuxt />
     </div>
 </template>
 
