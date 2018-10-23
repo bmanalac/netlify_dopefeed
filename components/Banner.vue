@@ -39,7 +39,7 @@
       apollo: {
         assetsGraphQL: {
           query: GET_ASSET_IMAGE,
-          variables() {
+          variables: () => {
             return {
               where: {
                 status: "PUBLISHED",
@@ -47,9 +47,7 @@
               }
             };
           },
-          update({ assets }) {
-            return (this.asset = assets[0]);
-          }
+          update: ({ assets }) => (this.asset = assets[0])
         }
       }
     };
