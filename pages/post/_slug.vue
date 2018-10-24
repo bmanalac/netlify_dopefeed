@@ -49,7 +49,7 @@
         }
       },
       components: {
-        VueMarkdown
+          VueMarkdown
       }
     };
 </script>
