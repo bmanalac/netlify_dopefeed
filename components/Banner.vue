@@ -10,7 +10,7 @@
             <div class="banner-image-grid relative h-full">
                 <div class="absolute w-full h-full bg-transparent-50"></div>
                 <div class="banner-image__container overflow-hidden">
-                    <img class="w-full h-full" :src="asset.url" :alt="asset.fileName" />
+                    <img class="w-full h-full" :src="bannerStore.image" :alt="bannerStore.alt" />
                 </div>
             </div>
         </div>
@@ -18,38 +18,10 @@
 </template>
 
 <script>
-    import gql from "graphql-tag";
-
-    const GET_ASSET_IMAGE = gql`
-      query GetAssetImageQuery($where: AssetWhereInput) {
-        assets(where: $where) {
-          id
-          fileName
-          url
-        }
-      }
-    `;
-
     export default {
-      data() {
-        return {
-          asset: {}
-        };
-      },
-      apollo: {
-        assetsGraphQL: {
-          query: GET_ASSET_IMAGE,
-          variables() {
-            return {
-              where: {
-                status: "PUBLISHED",
-                id: "cjnfk1s073it00914glti4cl6"
-              }
-            };
-          },
-          update({ assets }) {
-            return (this.asset = assets[0]);
-          }
+      computed: {
+        bannerStore() {
+          return this.$store.getters.getBannerStore;
         }
       }
     };
@@ -61,7 +33,8 @@
     }
 
     .banner-image-grid {
-      display: grid;
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr);  */
     }
 
     .banner-details {

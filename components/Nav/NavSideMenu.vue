@@ -5,16 +5,18 @@
 
         <nuxt-link class="font-oswald text-4xl text-red-light pl-4 py-4 hover:bg-grey-lightest hover:shadow" to="/" @click="handleClick">Home</nuxt-link>
 
+        <nuxt-link class="font-oswald text-4xl text-red-light pl-4 py-4 hover:bg-grey-lightest hover:shadow" to="/about">About</nuxt-link>
+
         <div class="py-4">
             <div class="font-oswald text-4xl text-red-light pl-4 py-4">
                 Gallery
             </div>
             <ul class="ml-4">
-                <nuxt-link to="/gallery/cookbook">
+                <nuxt-link to="/cookbook">
                     <li class="font-oswald text-4xl text-red-light pl-4 py-4 hover:bg-grey-lightest hover:shadow">Cookbook</li>
                 </nuxt-link>
-                <nuxt-link to="/gallery/haven">
-                    <li class="font-oswald text-4xl text-red-light pl-4 py-4 hover:bg-grey-lightest hover:shadow">Places</li>
+                <nuxt-link to="/haven">
+                    <li class="font-oswald text-4xl text-red-light pl-4 py-4 hover:bg-grey-lightest hover:shadow">Haven</li>
                 </nuxt-link>
             </ul>
         </div>

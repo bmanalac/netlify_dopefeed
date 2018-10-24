@@ -25,7 +25,7 @@
           if (index < 3) {
             return `top:0%; left: calc(${index * 50}% - 2px);`;
           } else if (index >= 3 && index <= 5) {
-            return `top:calc(50% - 1px); left: calc(${(index - 3) * 50}% - 2px);`;
+            return `top:calc(50% - 2px); left: calc(${(index - 3) * 50}% - 2px);`;
           } else {
             return `top:calc(100% - 2px); left: calc(${(index - 6) * 50}% - 2px);`;
           }

@@ -24,23 +24,23 @@
                 @mouseover="navLogoLink = true" 
                 @mouseout="navLogoLink = false">
                 <div class="nav-logo-icon__container">
-                    <div class="nav-logo-icon__link flex flex-row items-center text-white text-center z-20 h-full">
+                    <nuxt-link class="nav-logo-icon__link flex flex-row items-center text-white text-center z-20 h-full"
+                        to="/about">
                         <div class="nav-logo__header relative flex flex-col content-end text-right">
                                 <div class="nav-logo__header-details-1 hidden"
                                     :class="{ 'active': navLogoLink }">
-                                    <h1 class="font-playfair text-2xl md:text-3xl text-white">ABOUT</h1>
-                                    <h2 class="font-playfair text-xl text-white-dark">ME</h2>
+                                <h1 class="font-playfair text-2xl md:text-3xl text-white">ABOUT</h1>
+                                <h2 class="font-playfair text-xl text-white-dark">ME</h2>
                                 </div>
-
                                 <div class="nav-logo__header-details-2"
                                     :class="{ 'active': navLogoLink }">
-                                    <h1 class="font-playfair text-2xl md:text-3xl text-white leading-none">DOPEFEED</h1>
-                                    <h2 class="font-playfair text-base text-white-dark leading-none">FOOD &amp; DESTINATION</h2>
+                                <h1 class="font-playfair text-2xl md:text-3xl text-white leading-none">DOPEFEED</h1>
+                                <h2 class="font-playfair text-base text-white-dark leading-none">FOOD &amp; DESTINATION</h2>
                                 </div>
                         </div>
-                        <i class="fas fa-fire text-5xl text-white-dark"
-                            :class="{ 'active text-red-light': navLogoLink }"></i>
-                    </div>
+                        <!-- <i class="fas fa-fire text-5xl text-white-dark"
+                            :class="{ 'active text-red-light': navLogoLink }"></i> -->
+                    </nuxt-link>
                 </div>
             </div>
         </div>
