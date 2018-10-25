@@ -8,7 +8,6 @@
 
 <script>
     export default {
-      layout: 'gallery',
       head: {
         title: "Dopefeed destination Page"
       }

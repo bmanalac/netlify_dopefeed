@@ -27,14 +27,6 @@
       components: {
         ButtonGallery
       },
-      computed: {
-        featuredStore() {
-          return this.$store.getters.getFeaturedStore;
-        }
-      },
-      mounted() {
-        console.log(this.featuredStore);
-      }
     };
 </script>
 
