@@ -7,17 +7,13 @@
 </template>
 
 <script>
-    import Loading from "@/components/Loading.vue";
-    import Banner from "@/components/Banner.vue";
+    import Banner from "~/components/Banner.vue";
 
     export default {
-      data() {
-        return {
-          events: false
-        };
-      },
+      data: () => ({
+        loading: 0
+      }),
       components: {
-        Loading,
         Banner
       }
     };

@@ -10,7 +10,7 @@
             <div class="banner-image-grid relative h-full">
                 <div class="absolute w-full h-full bg-transparent-50"></div>
                 <div class="banner-image__container overflow-hidden">
-                    <img class="w-full h-full" :src="bannerStore.image" :alt="bannerStore.alt" />
+                    <!-- <img class="w-full h-full" :src="bannerStore.image" :alt="bannerStore.alt" /> -->
                 </div>
             </div>
         </div>
@@ -19,11 +19,6 @@
 
 <script>
     export default {
-      computed: {
-        bannerStore() {
-          return this.$store.getters.getBannerStore;
-        }
-      }
     };
 </script>
 
